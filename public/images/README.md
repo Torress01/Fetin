@@ -17,6 +17,3 @@ Este diretório contém as imagens utilizadas pelo projeto.
 ## Nota
 
 Se as imagens não estiverem disponíveis, as páginas funcionarão normalmente com upload manual de imagens.
-
-
-

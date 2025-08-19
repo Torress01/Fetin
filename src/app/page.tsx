@@ -5,6 +5,7 @@ import SectionsGrid from "@/components/SectionsGrid";
 import FeaturesSection from "@/components/FeaturesSection";
 import DemoSection from "@/components/DemoSection";
 import Footer from "@/components/Footer";
+import Multimedia from "@/components/Multimedia";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AnimatedBackground />
       <HeroSection />
       <SectionsGrid />
+      <Multimedia />
       <Footer />
     </main>
   );

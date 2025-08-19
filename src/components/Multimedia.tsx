@@ -13,18 +13,28 @@ interface ToolCard {
 
 const tools: ToolCard[] = [
   {
-    title: "Canvas Interativo",
-    description:
-      "Desenhe e manipule formas geométricas com ferramentas profissionais",
-    icon: "🎨",
-    href: "/canvas",
-    color: "purple",
-    features: [
-      "Transformações 2D",
-      "Curvas de Bézier",
-      "Sistema de cor",
-      "Animações",
-    ],
+    title: "Processamento de Imagem",
+    description: "Explore algoritmos de processamento e manipulação de imagens",
+    icon: "🖼️",
+    href: "/image-fft",
+    color: "blue",
+    features: ["FFT", "Filtros", "Aliasing", "Compressão"],
+  },
+  {
+    title: "Anti-Aliasing",
+    description: "Entenda e experimente técnicas de suavização de bordas",
+    icon: "✨",
+    href: "/aliasing",
+    color: "green",
+    features: ["MSAA", "FXAA", "Temporal AA", "Análise Visual"],
+  },
+  {
+    title: "Compressão de Dados",
+    description: "Aprenda sobre algoritmos de compressão e codificação",
+    icon: "🗜️",
+    href: "/compress",
+    color: "orange",
+    features: ["Huffman", "RLE", "LZW", "Análise de Eficiência"],
   },
 ];
 const getColorClasses = (color: string) => {
@@ -52,23 +62,22 @@ export default function SectionsComponent() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
-            Computação Gráfica
+            Multimídia
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Aprenda e visualize conceitos de computação gráfica em tempo real
-            usando ferramentas interativas para criar e manipular formas,
-            animações e transformações.
+            Domine técnicas fundamentais de processamento de imagens -
+            compressão, filtros FFT e anti-aliasing - através de demonstrações
+            visuais práticas.
           </p>
         </div>
 
         {/* Tools Grid */}
-
-        <div className="flex justify-center gap-8 mb-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {tools.map((tool, index) => (
             <Link
               key={index}
               href={tool.href}
-              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl aspect-square flex flex-col items-center justify-center p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/20 ${getColorClasses(
+              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/20 ${getColorClasses(
                 tool.color
               )}`}
             >
@@ -80,26 +89,30 @@ export default function SectionsComponent() {
               ></div>
 
               {/* Header */}
-              <div className="relative flex flex-col items-center justify-center mb-4 z-10">
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300 ${getColorClasses(
-                    tool.color
-                  )}`}
-                >
-                  {tool.icon}
+              <div className="relative flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300 ${getColorClasses(
+                      tool.color
+                    )}`}
+                  >
+                    {tool.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white group-hover:text-white transition-colors duration-300">
+                      {tool.title}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="mt-2 text-2xl font-bold text-white group-hover:text-white transition-colors duration-300 text-center">
-                  {tool.title}
-                </h3>
               </div>
 
               {/* Description */}
-              <p className="relative text-white/80 mb-4 leading-relaxed text-center z-10">
+              <p className="relative text-white/80 mb-6 leading-relaxed">
                 {tool.description}
               </p>
 
               {/* Features */}
-              <div className="relative flex flex-wrap gap-2 mb-4 justify-center z-10">
+              <div className="relative flex flex-wrap gap-2 mb-6">
                 {tool.features.map((feature) => (
                   <span
                     key={feature}
@@ -111,7 +124,7 @@ export default function SectionsComponent() {
               </div>
 
               {/* CTA */}
-              <div className="relative flex items-center justify-center gap-2 z-10">
+              <div className="relative flex items-center justify-between">
                 <span className="text-white/60 text-sm">
                   Clique para explorar
                 </span>

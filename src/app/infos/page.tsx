@@ -1,70 +1,80 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 
 interface Concept {
+  id: string;
   icon: string;
   title: string;
   description: string;
+  category: string;
   links: string[];
 }
 
 const concepts: Concept[] = [
   {
+    id: "bezier-curves",
     icon: "📐",
     title: "Curvas de Bézier",
     description:
       "Curvas paramétricas definidas por pontos de controle, amplamente utilizadas em design gráfico, animação e modelagem 3D. Fundamentais para criar formas suaves e orgânicas.",
+    category: "Computação Gráfica",
     links: ["Teoria", "Demo Interativa", "Aplicações"],
   },
   {
-    icon: "🎨",
-    title: "Ray Tracing",
-    description:
-      "Técnica de renderização que simula o comportamento físico da luz, criando reflexos, refrações e sombras realistas em tempo real.",
-    links: ["Algoritmo", "Exemplos", "Performance"],
-  },
-  {
+    id: "geometric-transformations",
     icon: "🔄",
     title: "Transformações Geométricas",
     description:
       "Operações matemáticas para translação, rotação, escala e cisalhamento de objetos em espaços 2D e 3D usando matrizes.",
+    category: "Computação Gráfica",
     links: ["Matrizes", "Visualizador", "Exercícios"],
   },
   {
+    id: "animations",
+    icon: "🕺",
+    title: "Animações",
+    description:
+      "Sequências temporais que criam movimento através da interpolação entre estados, fundamentais em jogos, interfaces e mídia digital. Essenciais para dar vida e fluidez às experiências visuais interativas.",
+    category: "Computação Gráfica",
+    links: ["Teoria", "História", "Aplicações"],
+  },
+  {
+    id: "ray-tracing",
+    icon: "🎨",
+    title: "Ray Tracing",
+    description:
+      "Técnica de renderização que simula o comportamento físico da luz, criando reflexos, refrações e sombras realistas em tempo real.",
+    category: "Multimídia",
+    links: ["Algoritmo", "Exemplos", "Performance"],
+  },
+  {
+    id: "video-compression",
     icon: "🎬",
     title: "Compressão de Vídeo",
     description:
       "Algoritmos e codecs para reduzir o tamanho de arquivos de vídeo mantendo qualidade visual, incluindo H.264, H.265 e AV1.",
+    category: "Multimídia",
     links: ["Codecs", "Comparativo", "Implementação"],
   },
   {
+    id: "color-spaces",
     icon: "🌈",
     title: "Espaços de Cor",
     description:
       "Modelos matemáticos para representar cores digitalmente, incluindo RGB, HSV, CMYK e Lab, cada um otimizado para diferentes aplicações.",
+    category: "Computação Gráfica",
     links: ["Modelos", "Conversor", "Aplicações"],
   },
   {
-    icon: "🔺",
-    title: "Rasterização",
-    description:
-      "Processo de conversão de primitivas geométricas (linhas, triângulos) em pixels, base da renderização em tempo real nos GPUs modernos.",
-    links: ["Pipeline", "Algoritmos", "GPU"],
-  },
-  {
-    icon: "🎵",
-    title: "Síntese de Áudio",
-    description:
-      "Técnicas para gerar sons digitalmente, desde osciladores básicos até síntese FM, AM e modelagem física de instrumentos.",
-    links: ["Tipos", "Sintetizador", "DSP"],
-  },
-  {
+    id: "lighting-models",
     icon: "💡",
     title: "Modelos de Iluminação",
     description:
       "Algoritmos para simular como a luz interage com superfícies, incluindo Phong, Blinn-Phong e modelos fisicamente baseados (PBR).",
+    category: "Multimídia",
     links: ["Phong", "PBR", "Shaders"],
   },
 ];
@@ -72,6 +82,7 @@ const concepts: Concept[] = [
 const categories = ["Todos", "Computação Gráfica", "Multimídia"];
 
 export default function InfosPage() {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState("Todos");
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredConcepts, setFilteredConcepts] = useState(concepts);
@@ -79,6 +90,14 @@ export default function InfosPage() {
   useEffect(() => {
     let filtered = concepts;
 
+    // Filter by category
+    if (activeCategory !== "Todos") {
+      filtered = filtered.filter(
+        (concept) => concept.category === activeCategory
+      );
+    }
+
+    // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(
         (concept) =>
@@ -89,6 +108,10 @@ export default function InfosPage() {
 
     setFilteredConcepts(filtered);
   }, [searchTerm, activeCategory]);
+
+  const handleConceptClick = (conceptId: string) => {
+    router.push(`/infos/${conceptId}`);
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0a0f] relative overflow-hidden">
@@ -149,12 +172,19 @@ export default function InfosPage() {
             {filteredConcepts.map((concept, index) => (
               <div
                 key={index}
+                onClick={() => handleConceptClick(concept.id)}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:-translate-y-2 hover:shadow-2xl hover:bg-white/10 transition-all duration-400 cursor-pointer group relative overflow-hidden border border-white/10"
               >
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
 
                 <div className="w-15 h-15 bg-gradient-to-br from-purple-500/30 to-blue-600/30 backdrop-blur-sm rounded-2xl flex items-center justify-center text-2xl text-white mb-5 shadow-lg border border-white/20">
                   {concept.icon}
+                </div>
+
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white/80 border border-white/20">
+                    {concept.category}
+                  </span>
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -175,6 +205,10 @@ export default function InfosPage() {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
                     </button>
                   ))}
+                </div>
+
+                <div className="mt-6 text-white/60 text-sm font-medium">
+                  Clique para saber mais →
                 </div>
               </div>
             ))}

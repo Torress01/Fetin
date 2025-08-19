@@ -44,34 +44,22 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link
-              href="/canvas"
+              href="#section-canvas"
               className="text-white/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-medium"
             >
-              Canvas
-            </Link>
-            <Link
-              href="/image-fft"
-              className="text-white/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-medium"
-            >
-              Processamento
-            </Link>
-            <Link
-              href="/aliasing"
-              className="text-white/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-medium"
-            >
-              Anti-Aliasing
+              Computação Gráfica
             </Link>
             <Link
               href="/compress"
               className="text-white/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-medium"
             >
-              Compressão
+              Multimídia
             </Link>
             <Link
               href="/infos"
               className="text-white/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-all duration-300 font-medium"
             >
-              Documentação
+              Material Teórico
             </Link>
           </nav>
 

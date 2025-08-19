@@ -570,11 +570,11 @@ export default function ImageFFTPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-blue-700 p-8">
+    <div className="min-h-screen bg-gradient-to-t from-gray-900 to-gray-700 p-8">
       {/* Back button */}
       <Link
         href="/"
-        className="absolute top-5 left-5 bg-white/90 text-blue-900 px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-lg"
+        className="fixed top-5 left-5 z-500 text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:-translate-y-0.5"
       >
         ← Voltar
       </Link>

@@ -63,7 +63,7 @@ function setup() {
 }
 
 function draw() {
-  background(Colors.Black);
+  background(Colors.BackgroundColor);
   translate(Mouse.panX, Mouse.panY);
   scale(Camera.currentScaleFactor);
   cursor(ARROW);

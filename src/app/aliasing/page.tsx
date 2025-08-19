@@ -264,26 +264,10 @@ export default function AliasingPage() {
       {/* Back to main button */}
       <Link
         href="/"
-        className="fixed top-5 left-5 z-50 bg-white/90 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-white hover:-translate-x-1 hover:shadow-lg backdrop-blur-md border border-white/30"
+        className="fixed top-5 left-5 z-500 text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:-translate-y-0.5"
       >
         ← Menu Principal
       </Link>
-
-      {/* Navigation buttons */}
-      <div className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 flex gap-2">
-        <Link
-          href="/canvas"
-          className="bg-purple-500/90 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-purple-500 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md border border-purple-300/30"
-        >
-          🎮 Canvas
-        </Link>
-        <Link
-          href="/image-fft"
-          className="bg-blue-500/90 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-blue-500 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md border border-blue-300/30"
-        >
-          🖼️ FFT
-        </Link>
-      </div>
 
       {/* Controls */}
       <div className="fixed top-5 right-5 z-50 bg-gray-800/95 text-white p-5 rounded-2xl backdrop-blur-md border border-white/10 min-w-[280px]">

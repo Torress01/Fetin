@@ -56,7 +56,7 @@ export default function HeroSection() {
             href="/infos"
             className="group bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 flex items-center justify-center gap-3"
           >
-            <span>📚 Ver Documentação</span>
+            <span>📚 Ver Material Teórico</span>
             <span className="group-hover:translate-x-1 transition-transform duration-300">
               →
             </span>
