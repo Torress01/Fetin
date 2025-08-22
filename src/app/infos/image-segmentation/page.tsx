@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 
-export default function GeometricTransformationsPage() {
+export default function ImageSegmentationPage() {
   const router = useRouter();
 
   return (
@@ -25,14 +25,14 @@ export default function GeometricTransformationsPage() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <div className="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-blue-600/30 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl text-white mb-6 shadow-lg border border-white/20 mx-auto">
-              🔄
+              🎯
             </div>
             <h1 className="text-5xl font-extrabold text-white mb-4">
-              Transformações Geométricas
+              Segmentação de Imagens
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              A matemática por trás da manipulação e transformação de objetos
-              digitais
+              Técnicas para separar e identificar regiões de interesse em
+              imagens digitais
             </p>
           </div>
 
@@ -46,21 +46,20 @@ export default function GeometricTransformationsPage() {
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
                 <p>
-                  As transformações geométricas têm suas raízes na geometria
-                  euclidiana, desenvolvida por Euclides no século III a.C. No
-                  entanto, sua aplicação em computação gráfica começou a se
-                  desenvolver na década de 1960.
+                  A segmentação de imagens tem suas origens na década de 1960,
+                  quando pesquisadores começaram a desenvolver algoritmos para
+                  análise automática de imagens médicas e satelitais.
                 </p>
                 <p>
-                  O desenvolvimento de sistemas CAD (Computer-Aided Design) e a
-                  necessidade de manipular objetos 3D em tempo real
-                  impulsionaram o estudo das transformações matriciais na
-                  computação gráfica.
+                  O algoritmo de flood fill foi desenvolvido por volta de 1979,
+                  sendo uma das técnicas mais fundamentais de segmentação. Ele
+                  permite preencher regiões conectadas de pixels com a mesma
+                  cor.
                 </p>
                 <p>
-                  Ivan Sutherland, considerado o "pai da computação gráfica",
-                  desenvolveu o Sketchpad em 1963, que foi o primeiro sistema a
-                  usar transformações geométricas de forma interativa.
+                  Na década de 1990, algoritmos mais sofisticados como watershed
+                  e region growing foram desenvolvidos, permitindo segmentação
+                  mais precisa e robusta para aplicações médicas e industriais.
                 </p>
               </div>
             </section>
@@ -69,78 +68,74 @@ export default function GeometricTransformationsPage() {
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <span className="text-blue-400">🧮</span>
-                Teoria Matemática
+                Algoritmos Principais
               </h2>
               <div className="text-white/80 space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    Matrizes de Transformação 2D
+                    Flood Fill (Preenchimento por Inundação)
                   </h3>
                   <p className="leading-relaxed mb-4">
-                    As transformações são representadas por matrizes que operam
-                    sobre coordenadas homogêneas:
+                    Algoritmo recursivo que preenche uma região conectada:
                   </p>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-black/30 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Translação
-                      </h4>
-                      <div className="font-mono text-sm">
-                        [1 0 tx]
-                        <br />
-                        [0 1 ty]
-                        <br />
-                        [0 0 1]
-                      </div>
-                    </div>
-
-                    <div className="bg-black/30 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">Escala</h4>
-                      <div className="font-mono text-sm">
-                        [sx 0 0]
-                        <br />
-                        [0 sy 0]
-                        <br />
-                        [0 0 1]
-                      </div>
-                    </div>
-
-                    <div className="bg-black/30 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">Rotação</h4>
-                      <div className="font-mono text-sm">
-                        [cos(θ) -sin(θ) 0]
-                        <br />
-                        [sin(θ) cos(θ) 0]
-                        <br />
-                        [0 0 1]
-                      </div>
-                    </div>
-
-                    <div className="bg-black/30 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Cisalhamento
-                      </h4>
-                      <div className="font-mono text-sm">
-                        [1 shx 0]
-                        <br />
-                        [shy 1 0]
-                        <br />
-                        [0 0 1]
-                      </div>
-                    </div>
+                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
+                    function floodFill(x, y, targetColor, replacementColor):
+                    <br />
+                    &nbsp;&nbsp;if pixel(x,y) != targetColor: return
+                    <br />
+                    &nbsp;&nbsp;setPixel(x,y, replacementColor)
+                    <br />
+                    &nbsp;&nbsp;floodFill(x+1, y, targetColor, replacementColor)
+                    <br />
+                    &nbsp;&nbsp;floodFill(x-1, y, targetColor, replacementColor)
+                    <br />
+                    &nbsp;&nbsp;floodFill(x, y+1, targetColor, replacementColor)
+                    <br />
+                    &nbsp;&nbsp;floodFill(x, y-1, targetColor, replacementColor)
                   </div>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    Composição de Transformações
+                    Segmentação por Cor
                   </h3>
-                  <p className="leading-relaxed">
-                    Múltiplas transformações podem ser combinadas através da
-                    multiplicação de matrizes. A ordem das transformações é
-                    crucial - a multiplicação de matrizes não é comutativa.
+                  <p className="leading-relaxed mb-4">
+                    Baseada na similaridade de cores entre pixels:
                   </p>
+                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
+                    distance = √[(R₁-R₂)² + (G₁-G₂)² + (B₁-B₂)²]
+                    <br />
+                    if distance ≤ tolerance:
+                    <br />
+                    &nbsp;&nbsp;segmentar pixel
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    Watershed (Bacia Hidrográfica)
+                  </h3>
+                  <p className="leading-relaxed mb-4">
+                    Algoritmo que trata a imagem como um mapa topográfico:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-black/20 rounded-lg p-4">
+                      <h4 className="text-white font-semibold mb-2">
+                        Marcadores
+                      </h4>
+                      <p className="text-sm">
+                        Pontos de partida para cada região
+                      </p>
+                    </div>
+                    <div className="bg-black/20 rounded-lg p-4">
+                      <h4 className="text-white font-semibold mb-2">
+                        Inundação
+                      </h4>
+                      <p className="text-sm">
+                        Simulação de água subindo dos marcadores
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -154,22 +149,11 @@ export default function GeometricTransformationsPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎮 Jogos 3D
+                    🎨 Photoshop
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
-                    Cada frame de um jogo 3D moderno aplica milhares de
-                    transformações matriciais para posicionar objetos, câmeras e
-                    efeitos visuais.
-                  </p>
-                </div>
-
-                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    🎬 Filmes de Animação
-                  </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Studios como Pixar usam transformações geométricas para
-                    animar personagens, câmeras e cenários em seus filmes.
+                    A ferramenta "Magic Wand" do Photoshop usa uma variação do
+                    flood fill com tolerância de cor para seleção automática.
                   </p>
                 </div>
 
@@ -178,20 +162,28 @@ export default function GeometricTransformationsPage() {
                     🏥 Medicina
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
-                    Tomografias e ressonâncias magnéticas usam transformações
-                    para alinhar imagens de diferentes ângulos e criar
-                    reconstruções 3D.
+                    Segmentação é crucial em tomografia computadorizada para
+                    identificar órgãos e detectar anomalias automaticamente.
                   </p>
                 </div>
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🚗 Carros Autônomos
+                    🤖 Visão Computacional
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
-                    Sistemas de visão computacional usam transformações para
-                    mapear coordenadas de câmeras para coordenadas do mundo
-                    real.
+                    Carros autônomos usam segmentação para identificar
+                    pedestres, outros veículos e obstáculos em tempo real.
+                  </p>
+                </div>
+
+                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    🛰️ Satélites
+                  </h3>
+                  <p className="text-white/80 text-sm leading-relaxed">
+                    Imagens de satélite são segmentadas para mapear uso do solo,
+                    monitorar desmatamento e analisar mudanças climáticas.
                   </p>
                 </div>
               </div>
@@ -205,73 +197,88 @@ export default function GeometricTransformationsPage() {
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎯</span>
+                  <span className="text-2xl">🏥</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Realidade Virtual
+                      Diagnóstico Médico
                     </h3>
                     <p>
-                      Transformação de coordenadas do mundo virtual para
-                      coordenadas da tela.
+                      Identificação automática de tumores, análise de raios-X e
+                      segmentação de órgãos em exames de imagem.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">📱</span>
+                  <span className="text-2xl">🚗</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Interfaces Touch
+                      Veículos Autônomos
                     </h3>
                     <p>
-                      Mapeamento de gestos de toque para ações na interface do
-                      usuário.
+                      Detecção de objetos, identificação de faixas de trânsito e
+                      reconhecimento de sinais de trânsito.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🏗️</span>
+                  <span className="text-2xl">🏭</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Arquitetura
+                      Controle de Qualidade
                     </h3>
                     <p>
-                      Visualização de projetos em diferentes escalas e
-                      perspectivas.
+                      Inspeção automática de produtos, detecção de defeitos e
+                      classificação de itens em linhas de produção.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎨</span>
+                  <span className="text-2xl">🎮</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      Design Gráfico
+                      Jogos e Entretenimento
                     </h3>
                     <p>
-                      Manipulação de imagens, redimensionamento e rotação de
-                      elementos.
+                      Remoção de fundos em fotos, efeitos especiais e
+                      reconhecimento de gestos para realidade virtual.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <span className="text-2xl">🔬</span>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      Pesquisa Científica
+                    </h3>
+                    <p>
+                      Análise de células em microscopia, contagem de partículas
+                      e estudo de padrões em imagens científicas.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
+
             {/* Demo Link */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-red-400">🎨</span>
+                <span className="text-red-400">🎯</span>
                 Experimente na Prática
               </h2>
               <div className="text-center">
                 <p className="text-white/80 mb-6">
-                  Teste nossa ferramenta interativa.
+                  Teste nossa ferramenta interativa de segmentação com flood
+                  fill e seleção inteligente por cor.
                 </p>
                 <button
-                  onClick={() => router.push("/canvas")}
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/40"
+                  onClick={() => router.push("/segmentation")}
+                  className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/40"
                 >
-                  🎨 Acessar
+                  🎯 Acessar Ferramenta de Segmentação
                 </button>
               </div>
             </section>

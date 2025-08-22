@@ -36,6 +36,27 @@ const tools: ToolCard[] = [
     color: "orange",
     features: ["Huffman", "RLE", "LZW", "Análise de Eficiência"],
   },
+  {
+    title: "Segmentação de Imagens",
+    description: "Ferramenta interativa para segmentação inteligente e manual",
+    icon: "🎯",
+    href: "/segmentation",
+    color: "purple",
+    features: ["Flood Fill", "Smart Selection", "Color Tolerance", "Export"],
+  },
+  {
+    title: "Vetorial vs Matricial",
+    description: "Compare a qualidade de imagens vetoriais e matriciais",
+    icon: "🎨",
+    href: "/vector",
+    color: "pink",
+    features: [
+      "Zoom Interativo",
+      "Comparação Visual",
+      "Qualidade",
+      "Escalabilidade",
+    ],
+  },
 ];
 const getColorClasses = (color: string) => {
   switch (color) {
@@ -47,6 +68,8 @@ const getColorClasses = (color: string) => {
       return "from-green-500/30 to-green-500/10 hover:shadow-green-500/20 hover:border-green-500/50";
     case "orange":
       return "from-orange-500/30 to-orange-500/10 hover:shadow-orange-500/20 hover:border-orange-500/50";
+    case "pink":
+      return "from-pink-500/30 to-pink-500/10 hover:shadow-pink-500/20 hover:border-pink-500/50";
     default:
       return "from-purple-500/30 to-purple-500/10 hover:shadow-purple-500/20 hover:border-purple-500/50";
   }
@@ -65,19 +88,19 @@ export default function SectionsComponent() {
             Multimídia
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Domine técnicas fundamentais de processamento de imagens -
-            compressão, filtros FFT e anti-aliasing - através de demonstrações
-            visuais práticas.
+            Domine técnicas fundamentais de processamento de imagens,
+            compressão, anti-aliasing, segmentação e comparação vetorial vs
+            matricial através de demonstrações visuais práticas e interativas.
           </p>
         </div>
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {tools.map((tool, index) => (
             <Link
               key={index}
               href={tool.href}
-              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/20 ${getColorClasses(
+              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/20 min-h-[400px] flex flex-col ${getColorClasses(
                 tool.color
               )}`}
             >
@@ -107,7 +130,7 @@ export default function SectionsComponent() {
               </div>
 
               {/* Description */}
-              <p className="relative text-white/80 mb-6 leading-relaxed">
+              <p className="relative text-white/80 mb-6 leading-relaxed flex-grow">
                 {tool.description}
               </p>
 
@@ -124,7 +147,7 @@ export default function SectionsComponent() {
               </div>
 
               {/* CTA */}
-              <div className="relative flex items-center justify-between">
+              <div className="relative flex items-center justify-between mt-auto">
                 <span className="text-white/60 text-sm">
                   Clique para explorar
                 </span>

@@ -77,6 +77,24 @@ const concepts: Concept[] = [
     category: "Multimídia",
     links: ["Phong", "PBR", "Shaders"],
   },
+  {
+    id: "image-segmentation",
+    icon: "🎯",
+    title: "Segmentação de Imagens",
+    description:
+      "Técnicas para separar e identificar regiões de interesse em imagens, incluindo flood fill, watershed e algoritmos baseados em cor.",
+    category: "Multimídia",
+    links: ["Flood Fill", "Watershed", "Color-Based"],
+  },
+  {
+    id: "vector-raster",
+    icon: "🎨",
+    title: "Vetorial vs Matricial",
+    description:
+      "Diferenças fundamentais entre imagens vetoriais (SVG) e matriciais (JPG/PNG), incluindo escalabilidade, qualidade e aplicações.",
+    category: "Multimídia",
+    links: ["Comparação", "Zoom Interativo", "Aplicações"],
+  },
 ];
 
 const categories = ["Todos", "Computação Gráfica", "Multimídia"];
