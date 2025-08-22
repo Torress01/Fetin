@@ -41,7 +41,7 @@ export default function BezierCurvesPage() {
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-purple-400">📚</span>
+
                 História
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
@@ -69,7 +69,7 @@ export default function BezierCurvesPage() {
             {/* Teoria */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-blue-400">🧮</span>
+
                 Teoria Matemática
               </h2>
               <div className="text-white/80 space-y-6">
@@ -109,13 +109,12 @@ export default function BezierCurvesPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-green-400">💡</span>
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎨 Adobe Illustrator
+                     Adobe Illustrator
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     A ferramenta "Pen Tool" do Adobe Illustrator é baseada
@@ -126,7 +125,7 @@ export default function BezierCurvesPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🚗 Design Automotivo
+                     Design Automotivo
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     As curvas de Bézier são usadas para modelar as formas
@@ -137,7 +136,7 @@ export default function BezierCurvesPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎬 Animação
+                     Animação
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Sistemas de animação como o Adobe After Effects usam curvas
@@ -147,7 +146,7 @@ export default function BezierCurvesPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    📱 Fontes Digitais
+                     Fontes Digitais
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     As fontes TrueType e PostScript são definidas usando curvas
@@ -161,12 +160,10 @@ export default function BezierCurvesPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-yellow-400">🔧</span>
                 Aplicações Modernas
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎯</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Design Gráfico
@@ -179,7 +176,6 @@ export default function BezierCurvesPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎮</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Jogos
@@ -192,7 +188,6 @@ export default function BezierCurvesPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🏗️</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Arquitetura
@@ -205,7 +200,7 @@ export default function BezierCurvesPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🤖</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Robótica
@@ -221,7 +216,6 @@ export default function BezierCurvesPage() {
             {/* Demo Link */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-red-400">🎨</span>
                 Experimente na Prática
               </h2>
               <div className="text-center">
@@ -232,7 +226,7 @@ export default function BezierCurvesPage() {
                   onClick={() => router.push("/canvas")}
                   className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/40"
                 >
-                  🎨 Acessar
+                  Acessar
                 </button>
               </div>
             </section>

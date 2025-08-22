@@ -42,7 +42,6 @@ export default function ColorSpacesPage() {
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-purple-400">📚</span>
                 História
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
@@ -68,7 +67,6 @@ export default function ColorSpacesPage() {
             {/* Teoria */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-blue-400">🧮</span>
                 Modelos de Cor
               </h2>
               <div className="text-white/80 space-y-6">
@@ -145,7 +143,6 @@ export default function ColorSpacesPage() {
             {/* Conversor de Cores */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-red-400">🎨</span>
                 Conversor de Cores Interativo
               </h2>
 
@@ -155,13 +152,12 @@ export default function ColorSpacesPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-green-400">💡</span>
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    👁️ Percepção
+                    Percepção
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     O olho humano pode distinguir aproximadamente 10 milhões de
@@ -171,7 +167,7 @@ export default function ColorSpacesPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎨 Arte Digital
+                    Arte Digital
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     O espaço de cor sRGB foi criado pela HP e Microsoft em 1996
@@ -181,7 +177,7 @@ export default function ColorSpacesPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    📱 Displays
+                    Displays
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Monitores modernos podem exibir mais cores que o sRGB,
@@ -192,7 +188,7 @@ export default function ColorSpacesPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎬 Cinema
+                    Cinema
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     O DCI-P3 foi desenvolvido para cinema digital, oferecendo
@@ -205,12 +201,10 @@ export default function ColorSpacesPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-yellow-400">🔧</span>
                 Aplicações Práticas
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎨</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Design Gráfico
@@ -223,7 +217,6 @@ export default function ColorSpacesPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🖨️</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Impressão
@@ -236,7 +229,6 @@ export default function ColorSpacesPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">📱</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Interfaces
@@ -249,7 +241,6 @@ export default function ColorSpacesPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎬</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Cinema
@@ -262,7 +253,6 @@ export default function ColorSpacesPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🔬</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Ciência
@@ -287,7 +277,7 @@ function ColorConverter() {
   const [rgb, setRgb] = useState({ r: 255, g: 100, b: 150 });
   const [hsv, setHsv] = useState({ h: 330, s: 61, v: 100 });
   const [cmyk, setCmyk] = useState({ c: 0, m: 61, y: 41, k: 0 });
-  const [activeInput, setActiveInput] = useState<"rgb" | "hsv">("rgb");
+  const [activeInput, setActiveInput] = useState<"rgb" | "hsv" | "cmyk">("rgb");
 
   // Converter RGB para HSV
   const rgbToHsv = (r: number, g: number, b: number) => {
@@ -391,6 +381,24 @@ function ColorConverter() {
     };
   };
 
+  // Converter CMYK para RGB
+  const cmykToRgb = (c: number, m: number, y: number, k: number) => {
+    c /= 100;
+    m /= 100;
+    y /= 100;
+    k /= 100;
+
+    const r = 255 * (1 - c) * (1 - k);
+    const g = 255 * (1 - m) * (1 - k);
+    const b = 255 * (1 - y) * (1 - k);
+
+    return {
+      r: Math.round(r),
+      g: Math.round(g),
+      b: Math.round(b),
+    };
+  };
+
   // Atualizar quando RGB mudar
   useEffect(() => {
     if (activeInput === "rgb") {
@@ -411,6 +419,16 @@ function ColorConverter() {
     }
   }, [hsv, activeInput]);
 
+  // Atualizar quando CMYK mudar
+  useEffect(() => {
+    if (activeInput === "cmyk") {
+      const newRgb = cmykToRgb(cmyk.c, cmyk.m, cmyk.y, cmyk.k);
+      const newHsv = rgbToHsv(newRgb.r, newRgb.g, newRgb.b);
+      setRgb(newRgb);
+      setHsv(newHsv);
+    }
+  }, [cmyk, activeInput]);
+
   const rgbColor = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
 
   return (
@@ -430,7 +448,6 @@ function ColorConverter() {
       {/* Controles RGB */}
       <div className="bg-black/20 rounded-lg p-6 border border-white/10">
         <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
-          <span className="text-red-400">🔴</span>
           RGB (Red, Green, Blue)
         </h3>
         <div className="grid md:grid-cols-3 gap-4">
@@ -528,7 +545,6 @@ function ColorConverter() {
       {/* Controles HSV */}
       <div className="bg-black/20 rounded-lg p-6 border border-white/10">
         <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
-          <span className="text-purple-400">🌈</span>
           HSV (Hue, Saturation, Value)
         </h3>
         <div className="grid md:grid-cols-3 gap-4">
@@ -625,10 +641,9 @@ function ColorConverter() {
         </div>
       </div>
 
-      {/* Valores CMYK (Somente Leitura) */}
+      {/* Controles CMYK */}
       <div className="bg-black/20 rounded-lg p-6 border border-white/10">
         <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
-          <span className="text-cyan-400">🖨️</span>
           CMYK (Cyan, Magenta, Yellow, Key)
         </h3>
         <div className="grid md:grid-cols-4 gap-4">
@@ -637,10 +652,29 @@ function ColorConverter() {
               Ciano (C)
             </label>
             <input
-              type="number"
+              type="range"
+              min="0"
+              max="100"
               value={cmyk.c}
-              readOnly
-              className="w-full px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({ ...prev, c: parseInt(e.target.value) }));
+              }}
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+            />
+            <input
+              type="number"
+              min="0"
+              max="100"
+              value={cmyk.c}
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({
+                  ...prev,
+                  c: parseInt(e.target.value) || 0,
+                }));
+              }}
+              className="w-full mt-2 px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
             />
           </div>
           <div>
@@ -648,10 +682,29 @@ function ColorConverter() {
               Magenta (M)
             </label>
             <input
-              type="number"
+              type="range"
+              min="0"
+              max="100"
               value={cmyk.m}
-              readOnly
-              className="w-full px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({ ...prev, m: parseInt(e.target.value) }));
+              }}
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+            />
+            <input
+              type="number"
+              min="0"
+              max="100"
+              value={cmyk.m}
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({
+                  ...prev,
+                  m: parseInt(e.target.value) || 0,
+                }));
+              }}
+              className="w-full mt-2 px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
             />
           </div>
           <div>
@@ -659,10 +712,29 @@ function ColorConverter() {
               Amarelo (Y)
             </label>
             <input
-              type="number"
+              type="range"
+              min="0"
+              max="100"
               value={cmyk.y}
-              readOnly
-              className="w-full px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({ ...prev, y: parseInt(e.target.value) }));
+              }}
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+            />
+            <input
+              type="number"
+              min="0"
+              max="100"
+              value={cmyk.y}
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({
+                  ...prev,
+                  y: parseInt(e.target.value) || 0,
+                }));
+              }}
+              className="w-full mt-2 px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
             />
           </div>
           <div>
@@ -670,10 +742,29 @@ function ColorConverter() {
               Preto (K)
             </label>
             <input
-              type="number"
+              type="range"
+              min="0"
+              max="100"
               value={cmyk.k}
-              readOnly
-              className="w-full px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({ ...prev, k: parseInt(e.target.value) }));
+              }}
+              className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+            />
+            <input
+              type="number"
+              min="0"
+              max="100"
+              value={cmyk.k}
+              onChange={(e) => {
+                setActiveInput("cmyk");
+                setCmyk((prev) => ({
+                  ...prev,
+                  k: parseInt(e.target.value) || 0,
+                }));
+              }}
+              className="w-full mt-2 px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white text-center"
             />
           </div>
         </div>

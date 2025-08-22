@@ -5,7 +5,7 @@ import Header from "./Header";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col text-center px-8 pt-36 relative bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 overflow-hidden">
+    <section className="min-h-screen flex flex-col text-center px-8 pt-36 relative bg-gradient-to-t from-slate-900 to-black overflow-hidden">
       <Header />
 
       {/* Main Hero Content */}
@@ -31,7 +31,6 @@ export default function HeroSection() {
         {/* Target Audience */}
         <div className="flex flex-col sm:flex-row gap-6 mb-16">
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-6 hover:bg-white/15 transition-all duration-300">
-            <div className="text-3xl mb-3">👨‍🎓</div>
             <h3 className="text-lg font-semibold text-white mb-2">
               Para Alunos
             </h3>
@@ -40,7 +39,6 @@ export default function HeroSection() {
             </p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-6 hover:bg-white/15 transition-all duration-300">
-            <div className="text-3xl mb-3">👨‍🏫</div>
             <h3 className="text-lg font-semibold text-white mb-2">
               Para Professores
             </h3>
@@ -56,7 +54,7 @@ export default function HeroSection() {
             href="/infos"
             className="group bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 flex items-center justify-center gap-3"
           >
-            <span>📚 Ver Material Teórico</span>
+            <span>Ver Material Teórico</span>
             <span className="group-hover:translate-x-1 transition-transform duration-300">
               →
             </span>

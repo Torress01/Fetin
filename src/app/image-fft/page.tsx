@@ -62,9 +62,8 @@ export default function ImageFFTPage() {
   const initializeDefaultImage = (ctx: CanvasRenderingContext2D) => {
     // Create a simple test pattern
     const gradient = ctx.createLinearGradient(0, 0, 512, 512);
-    gradient.addColorStop(0, "#ff6b6b");
-    gradient.addColorStop(0.5, "#4ecdc4");
-    gradient.addColorStop(1, "#45b7d1");
+    gradient.addColorStop(0, "#6366f1");
+    gradient.addColorStop(1, "#a78bfa");
 
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 512, 512);
@@ -570,7 +569,7 @@ export default function ImageFFTPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-gray-900 to-gray-700 p-8">
+    <div className="min-h-screen bg-gradient-to-t from-slate-900 to-gray-700 p-8">
       {/* Back button */}
       <Link
         href="/"
@@ -579,32 +578,32 @@ export default function ImageFFTPage() {
         ← Voltar
       </Link>
 
-      <div className="max-w-7xl mx-auto bg-white/95 rounded-xl p-10 shadow-2xl backdrop-blur-sm">
-        <h1 className="text-4xl font-bold text-center text-gray-700 mb-10 mt-0">
+      <div className="max-w-7xl mx-auto bg-gradient-to-t from-slate-900 to-gray-700 rounded-xl p-10 shadow-2xl backdrop-blur-sm">
+        <h1 className="text-4xl font-bold text-center text-white mb-10 mt-0">
           Editor de Imagens FFT
         </h1>
 
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Original Image Section */}
           <div className="flex-1">
-            <div className="bg-white p-5 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">
+            <div className="bg-slate-600 p-5 rounded-xl shadow-lg">
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Imagem Original
               </h3>
               <canvas
                 ref={originalCanvasRef}
-                className="w-full max-w-[512px] h-[512px] border-4 border-blue-100 rounded-lg mx-auto block"
+                className="w-full max-w-[512px] h-[512px] border-4 border-slate-400 rounded-lg mx-auto block"
                 style={{ cursor: "default" }}
               />
               <div className="mt-4 text-center">
-                <label className="relative inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full cursor-pointer font-semibold text-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <label className="relative inline-block bg-gradient-to-r from-slate-900 to-gray-700 text-white px-8 py-4 rounded-full cursor-pointer font-semibold text-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
                   <input
                     type="file"
                     accept="image/*"
                     onChange={handleImageUpload}
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                   />
-                  📸 Escolha uma Imagem 📸
+                  Escolha uma Imagem
                 </label>
               </div>
             </div>
@@ -612,27 +611,25 @@ export default function ImageFFTPage() {
 
           {/* FFT Domain Section */}
           <div className="flex-1">
-            <div className="bg-white p-5 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">
+            <div className="bg-slate-600 p-5 rounded-xl shadow-lg">
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Domínio da Frequência
               </h3>
               <canvas
                 ref={fftCanvasRef}
-                className="w-full max-w-[512px] h-[512px] border-4 border-blue-100 rounded-lg mx-auto block"
+                className="w-full max-w-[512px] h-[512px] border-4 border-slate-400 rounded-lg mx-auto block"
                 style={{ cursor: "crosshair" }}
               />
 
               {/* Controls */}
-              <div className="mt-4 bg-blue-50 p-4 rounded-lg">
+              <div className="mt-4  bg-gradient-to-r from-slate-90 p-4 rounded-lg">
                 <div className="flex flex-wrap justify-center gap-4 items-center">
                   <div className="flex items-center gap-2">
-                    <label className="font-semibold text-gray-700">
-                      Pincel:
-                    </label>
+                    <label className="font-semibold text-white">Pincel:</label>
                     <select
                       value={drawMode}
                       onChange={(e) => setDrawMode(e.target.value as DrawMode)}
-                      className="px-3 py-2 border-2 border-gray-200 rounded-lg bg-white text-sm"
+                      className="px-3 py-2 border-2 border-gray-200 rounded-lg bg-slate-300 text-sm"
                     >
                       <option value="erase">⚫ Preto</option>
                       <option value="smooth">⚫ Suavizar</option>
@@ -641,9 +638,7 @@ export default function ImageFFTPage() {
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <label className="font-semibold text-gray-700">
-                      Tamanho:
-                    </label>
+                    <label className="font-semibold text-white">Tamanho:</label>
                     <input
                       type="range"
                       min="10"
@@ -652,16 +647,16 @@ export default function ImageFFTPage() {
                       onChange={(e) => setBrushSize(parseInt(e.target.value))}
                       className="w-24"
                     />
-                    <span className="bg-purple-500 text-white px-2 py-1 rounded font-bold text-sm min-w-[30px] text-center">
+                    <span className="bg-slate-200 text-black px-2 py-1 rounded font-bold text-sm min-w-[30px] text-center">
                       {brushSize}
                     </span>
                   </div>
 
                   <button
                     onClick={resetFFT}
-                    className="bg-gradient-to-r from-green-500 to-green-600 text-white px-5 py-2 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                    className=" bg-slate-900 text-white px-5 py-2 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   >
-                    🔄 Limpar
+                    Limpar
                   </button>
                 </div>
               </div>

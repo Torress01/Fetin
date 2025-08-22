@@ -40,7 +40,7 @@ export default function VideoCompressionPage() {
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-purple-400">📚</span>
+
                 História
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
@@ -66,7 +66,7 @@ export default function VideoCompressionPage() {
             {/* Teoria */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-blue-400">🧮</span>
+
                 Como Funciona
               </h2>
               <div className="text-white/80 space-y-6">
@@ -151,13 +151,13 @@ export default function VideoCompressionPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-green-400">💡</span>
+
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    📱 YouTube
+                    YouTube
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     O YouTube processa mais de 500 horas de vídeo por minuto,
@@ -167,7 +167,7 @@ export default function VideoCompressionPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎬 Netflix
+                    Netflix
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     A Netflix usa algoritmos de IA para otimizar a compressão
@@ -177,7 +177,7 @@ export default function VideoCompressionPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    ⚡ Hardware
+                    Hardware
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     GPUs modernas têm hardware dedicado para
@@ -188,7 +188,7 @@ export default function VideoCompressionPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🔬 Pesquisa
+                    Pesquisa
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Pesquisadores estão desenvolvendo codecs baseados em IA que
@@ -202,12 +202,12 @@ export default function VideoCompressionPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-yellow-400">🔧</span>
+
                 Codecs Modernos
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">📺</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       H.264/AVC
@@ -220,7 +220,7 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎬</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       H.265/HEVC
@@ -230,7 +230,7 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🌐</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       AV1
@@ -243,7 +243,7 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">📱</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       H.266/VVC
@@ -260,12 +260,12 @@ export default function VideoCompressionPage() {
             {/* Impacto */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-red-400">🌍</span>
+
                 Impacto Global
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">💾</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Armazenamento
@@ -278,7 +278,7 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🌐</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Streaming
@@ -291,7 +291,7 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">📱</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Mobile
@@ -304,7 +304,7 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎓</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Educação
@@ -320,7 +320,7 @@ export default function VideoCompressionPage() {
             {/* Demo Link */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-red-400">🎨</span>
+
                 Experimente na Prática
               </h2>
               <div className="text-center">
@@ -331,7 +331,7 @@ export default function VideoCompressionPage() {
                   onClick={() => router.push("/compress")}
                   className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/40"
                 >
-                  🎨 Acessar
+                  Acessar
                 </button>
               </div>
             </section>

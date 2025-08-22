@@ -41,7 +41,6 @@ export default function VectorRasterPage() {
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-purple-400">📚</span>
                 História e Evolução
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
@@ -71,14 +70,13 @@ export default function VectorRasterPage() {
             {/* Comparação Técnica */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-blue-400">🔬</span>
                 Comparação Técnica
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Vetorial */}
                 <div className="bg-green-500/10 rounded-xl p-6 border border-green-500/20">
                   <h3 className="text-2xl font-bold text-green-400 mb-4">
-                    🎯 Imagens Vetoriais
+                    Imagens Vetoriais
                   </h3>
                   <div className="space-y-3 text-white/80">
                     <div>
@@ -113,7 +111,7 @@ export default function VectorRasterPage() {
                 {/* Matricial */}
                 <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-500/20">
                   <h3 className="text-2xl font-bold text-blue-400 mb-4">
-                    📸 Imagens Matriciais
+                    Imagens Matriciais
                   </h3>
                   <div className="space-y-3 text-white/80">
                     <div>
@@ -148,17 +146,15 @@ export default function VectorRasterPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-green-400">💡</span>
                 Aplicações Práticas
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-green-400 mb-4">
-                    🎯 Quando Usar Vetorial
+                    Quando Usar Vetorial
                   </h3>
                   <div className="space-y-3 text-white/80">
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">🏢</span>
                       <div>
                         <strong>Logos e Identidade Visual</strong>
                         <p className="text-sm">
@@ -167,7 +163,6 @@ export default function VectorRasterPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">📱</span>
                       <div>
                         <strong>Ícones e UI</strong>
                         <p className="text-sm">
@@ -176,7 +171,6 @@ export default function VectorRasterPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">📊</span>
                       <div>
                         <strong>Gráficos e Diagramas</strong>
                         <p className="text-sm">
@@ -185,7 +179,6 @@ export default function VectorRasterPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">🎨</span>
                       <div>
                         <strong>Ilustrações Técnicas</strong>
                         <p className="text-sm">
@@ -198,11 +191,10 @@ export default function VectorRasterPage() {
 
                 <div>
                   <h3 className="text-xl font-semibold text-blue-400 mb-4">
-                    📸 Quando Usar Matricial
+                    Quando Usar Matricial
                   </h3>
                   <div className="space-y-3 text-white/80">
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">📷</span>
                       <div>
                         <strong>Fotografias</strong>
                         <p className="text-sm">
@@ -211,21 +203,18 @@ export default function VectorRasterPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">🎨</span>
                       <div>
                         <strong>Arte Digital</strong>
                         <p className="text-sm">Pintura e efeitos artísticos</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">🎮</span>
                       <div>
                         <strong>Texturas e Materiais</strong>
                         <p className="text-sm">Detalhes realistas para 3D</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl">📱</span>
                       <div>
                         <strong>Capturas de Tela</strong>
                         <p className="text-sm">
@@ -241,13 +230,12 @@ export default function VectorRasterPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-yellow-400">💡</span>
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🌐 Web Moderna
+                    Web Moderna
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     O SVG revolucionou a web ao permitir gráficos escaláveis que
@@ -258,7 +246,7 @@ export default function VectorRasterPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎨 Photoshop
+                    Photoshop
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     O Photoshop trabalha principalmente com imagens matriciais,
@@ -269,7 +257,7 @@ export default function VectorRasterPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    📱 Responsividade
+                    Responsividade
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Ícones vetoriais são essenciais para apps modernos, pois se
@@ -280,7 +268,7 @@ export default function VectorRasterPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🖨️ Impressão
+                    Impressão
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Para impressão em alta qualidade, imagens matriciais
@@ -294,7 +282,6 @@ export default function VectorRasterPage() {
             {/* Demo Link */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-red-400">🎨</span>
                 Experimente na Prática
               </h2>
               <div className="text-center">
@@ -306,7 +293,7 @@ export default function VectorRasterPage() {
                   onClick={() => router.push("/vector")}
                   className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/40"
                 >
-                  🎨 Acessar Comparador Vetorial vs Matricial
+                  Acessar Comparador Vetorial vs Matricial
                 </button>
               </div>
             </section>

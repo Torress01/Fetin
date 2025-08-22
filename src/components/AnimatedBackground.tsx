@@ -18,7 +18,7 @@ export default function AnimatedBackground() {
     <>
       {/* Animated Background */}
       <div
-        className="fixed inset-0 -z-20 bg-gradient-radial from-purple-500/30 via-transparent to-transparent animate-pulse"
+        className="fixed inset-0 -z-20 bg-gradient-radial from-gray-500/30 via-transparent to-transparent animate-pulse"
         style={{
           background: `
                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
@@ -31,7 +31,7 @@ export default function AnimatedBackground() {
       {/* Floating Shapes */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <div
-          className="absolute w-15 h-15 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full opacity-10 animate-bounce"
+          className="absolute w-15 h-15 bg-gradient-to-br from-black to-gray-900 rounded-full opacity-10 animate-bounce"
           style={{
             top: "20%",
             left: "10%",
@@ -42,7 +42,7 @@ export default function AnimatedBackground() {
           }}
         />
         <div
-          className="absolute w-20 h-20 bg-gradient-to-br from-pink-500 to-red-500 opacity-10 animate-bounce"
+          className="absolute w-20 h-20 bg-gradient-to-br from-black to-gray-900 opacity-10 animate-bounce"
           style={{
             top: "60%",
             right: "15%",
@@ -54,7 +54,7 @@ export default function AnimatedBackground() {
           }}
         />
         <div
-          className="absolute w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-10 animate-bounce rotate-45"
+          className="absolute w-10 h-10 bg-gradient-to-br from-black to-gray-900 opacity-10 animate-bounce rotate-45"
           style={{
             bottom: "30%",
             left: "20%",

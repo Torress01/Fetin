@@ -230,7 +230,7 @@ export default function CompressPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-black to-gray-900 p-8">
+    <div className="min-h-screen  bg-gradient-to-r from-slate-900 to-gray-700 p-8">
       {/* Back button */}
       <Link
         href="/"
@@ -243,7 +243,7 @@ export default function CompressPage() {
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-white mb-4">
-            🗜️ Compressão de Imagens
+            Compressão de Imagens
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Compare diferentes algoritmos de compressão e veja como eles afetam
@@ -263,13 +263,15 @@ export default function CompressPage() {
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
         >
-          <div className="text-6xl mb-6 opacity-70">
-            {isImageLoaded ? "✅" : "📁"}
-          </div>
-          <div className="text-xl text-white mb-6">
-            {isImageLoaded
-              ? "Imagem carregada com sucesso!"
-              : "Arraste uma imagem aqui ou clique para selecionar"}
+          <div className="flex gap-3 items-center justify-center">
+            <div className="text-4xl mb-6 opacity-70">
+              {isImageLoaded ? "✅" : "📁"}
+            </div>
+            <div className="text-xl text-white mb-6">
+              {isImageLoaded
+                ? "Imagem carregada com sucesso!"
+                : "Arraste uma imagem aqui ou clique para selecionar"}
+            </div>
           </div>
           <input
             ref={fileInputRef}
@@ -280,7 +282,7 @@ export default function CompressPage() {
           />
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-green-500/40"
+            className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold cursor-pointer"
           >
             {isImageLoaded ? "Trocar Imagem" : "Escolher Imagem"}
           </button>
@@ -291,8 +293,8 @@ export default function CompressPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Original Image Panel */}
             <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-md border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4 pb-2 border-b border-white/20">
-                📸 Imagem Original
+              <h3 className="flex justify-center text-2xl font-semibold text-white mb-4 pb-2 border-b border-white/20">
+                Imagem Original
               </h3>
 
               <div className="bg-black/30 rounded-xl p-5 mb-6 min-h-[300px] flex items-center justify-center">
@@ -329,8 +331,8 @@ export default function CompressPage() {
 
             {/* Compressed Image Panel */}
             <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-md border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4 pb-2 border-b border-white/20">
-                🗜️ Imagem Comprimida
+              <h3 className="flex justify-center text-2xl font-semibold text-white mb-4 pb-2 border-b border-white/20">
+                Imagem Comprimida
               </h3>
 
               <div className="bg-black/30 rounded-xl p-5 mb-6 min-h-[300px] flex items-center justify-center">
@@ -341,8 +343,8 @@ export default function CompressPage() {
                     className="max-w-full max-h-[300px] rounded-lg shadow-lg"
                   />
                 ) : (
-                  <div className="text-white/60 italic">
-                    Configure a compressão e clique em "Comprimir"
+                  <div className="text-white/60">
+                    Configure a compressão e clique em 'Comprimir'
                   </div>
                 )}
               </div>
@@ -360,7 +362,7 @@ export default function CompressPage() {
                         onClick={() => setCurrentCompressionType(type)}
                         className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                           currentCompressionType === type
-                            ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                            ? "bg-gradient-to-r from-orange-800 to-red-800 text-white"
                             : "bg-white/10 text-white hover:bg-white/20"
                         }`}
                       >
@@ -374,7 +376,7 @@ export default function CompressPage() {
                   <div className="mb-4">
                     <label className="block text-white/80 font-medium mb-3">
                       Qualidade:{" "}
-                      <span className="bg-orange-500/20 text-orange-400 px-2 py-1 rounded text-sm font-bold">
+                      <span className="text-orange-400 px-2 py-1 rounded text-sm font-bold">
                         {quality}%
                       </span>
                     </label>
@@ -392,7 +394,7 @@ export default function CompressPage() {
                 <button
                   onClick={compressImage}
                   disabled={isProcessing}
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/40 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r  from-orange-800 to-red-800 text-white py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/40 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isProcessing ? "Processando..." : "Comprimir Imagem"}
                 </button>

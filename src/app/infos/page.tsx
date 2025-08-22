@@ -30,7 +30,7 @@ const concepts: Concept[] = [
     description:
       "Operações matemáticas para translação, rotação, escala e cisalhamento de objetos em espaços 2D e 3D usando matrizes.",
     category: "Computação Gráfica",
-    links: ["Matrizes", "Visualizador", "Exercícios"],
+    links: ["Visualizador interativo"],
   },
   {
     id: "animations",
@@ -69,22 +69,13 @@ const concepts: Concept[] = [
     links: ["Modelos", "Conversor", "Aplicações"],
   },
   {
-    id: "lighting-models",
-    icon: "💡",
-    title: "Modelos de Iluminação",
-    description:
-      "Algoritmos para simular como a luz interage com superfícies, incluindo Phong, Blinn-Phong e modelos fisicamente baseados (PBR).",
-    category: "Multimídia",
-    links: ["Phong", "PBR", "Shaders"],
-  },
-  {
     id: "image-segmentation",
     icon: "🎯",
     title: "Segmentação de Imagens",
     description:
       "Técnicas para separar e identificar regiões de interesse em imagens, incluindo flood fill, watershed e algoritmos baseados em cor.",
     category: "Multimídia",
-    links: ["Flood Fill", "Watershed", "Color-Based"],
+    links: ["Watershed", "Color-Based"],
   },
   {
     id: "vector-raster",
@@ -132,7 +123,7 @@ export default function InfosPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-t from-black to-gray-700 overflow-hidden">
       {/* Header */}
       <Header />
 
@@ -164,11 +155,11 @@ export default function InfosPage() {
       </section>
 
       {/* Main Content */}
-      <main className="bg-black/20 backdrop-blur-sm rounded-t-3xl relative z-10 shadow-2xl border-t border-white/10">
+      <main className="bg-black/20 rounded-t-3xl relative z-10 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-5 py-16">
           {/* Filter Tabs */}
           <div className="text-center mb-16">
-            <div className="inline-flex bg-white/5 backdrop-blur-sm rounded-full p-1 shadow-inner border border-white/10">
+            <div className="inline-flex rounded-full p-1 border border-white/10">
               {categories.map((category) => (
                 <button
                   key={category}

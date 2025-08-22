@@ -18,7 +18,7 @@ const tools: ToolCard[] = [
     icon: "🖼️",
     href: "/image-fft",
     color: "blue",
-    features: ["FFT", "Filtros", "Aliasing", "Compressão"],
+    features: ["FFT", "Filtros"],
   },
   {
     title: "Anti-Aliasing",
@@ -26,7 +26,7 @@ const tools: ToolCard[] = [
     icon: "✨",
     href: "/aliasing",
     color: "green",
-    features: ["MSAA", "FXAA", "Temporal AA", "Análise Visual"],
+    features: ["Análise Visual"],
   },
   {
     title: "Compressão de Dados",
@@ -34,7 +34,7 @@ const tools: ToolCard[] = [
     icon: "🗜️",
     href: "/compress",
     color: "orange",
-    features: ["Huffman", "RLE", "LZW", "Análise de Eficiência"],
+    features: ["JPEG", "WEBP", "FRACTAL", "DCT"],
   },
   {
     title: "Segmentação de Imagens",
@@ -42,7 +42,7 @@ const tools: ToolCard[] = [
     icon: "🎯",
     href: "/segmentation",
     color: "purple",
-    features: ["Flood Fill", "Smart Selection", "Color Tolerance", "Export"],
+    features: ["Seleção inteligente", "Export"],
   },
   {
     title: "Vetorial vs Matricial",
@@ -54,7 +54,6 @@ const tools: ToolCard[] = [
       "Zoom Interativo",
       "Comparação Visual",
       "Qualidade",
-      "Escalabilidade",
     ],
   },
 ];

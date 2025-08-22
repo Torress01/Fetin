@@ -123,11 +123,11 @@ export default function VectorPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-700 text-white p-8">
       {/* Back button */}
       <Link
         href="/"
-        className="fixed top-5 left-5 z-50 bg-white/90 text-blue-900 px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-lg"
+        className="fixed top-5 left-5 z-50 tex-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 "
       >
         ← Voltar
       </Link>
@@ -136,7 +136,7 @@ export default function VectorPage() {
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-white mb-4">
-            🎨 Vetorial vs Matricial
+            Vetorial x Matricial
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Compare a qualidade de imagens vetoriais e matriciais em diferentes
@@ -149,7 +149,7 @@ export default function VectorPage() {
           {/* Vector Section */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">
-              🎯 Imagem Vetorial
+              Imagem Vetorial
             </h2>
             <div className="bg-white/5 rounded-xl p-6 mb-6">
               <div className="flex justify-center mb-4">
@@ -218,14 +218,14 @@ export default function VectorPage() {
                   onClick={resetVector}
                   className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/40"
                 >
-                  🔄 Reset
+                  Reset
                 </button>
               </div>
             </div>
 
             <div className="bg-green-500/20 rounded-lg p-4 border border-green-500/30">
               <h3 className="text-green-400 font-semibold mb-2">
-                ✅ Vantagens Vetorial:
+                Vantagens Vetorial:
               </h3>
               <ul className="text-white/80 text-sm space-y-1">
                 <li>• Escalável sem perda de qualidade</li>
@@ -239,7 +239,7 @@ export default function VectorPage() {
           {/* Raster Section */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">
-              📸 Imagem Matricial
+              Imagem Matricial
             </h2>
             <div className="bg-white/5 rounded-xl p-6 mb-6">
               <div className="flex justify-center mb-4">
@@ -277,14 +277,14 @@ export default function VectorPage() {
                   onClick={resetRaster}
                   className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/40"
                 >
-                  🔄 Reset
+                  Reset
                 </button>
               </div>
             </div>
 
             <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-500/30">
               <h3 className="text-blue-400 font-semibold mb-2">
-                ⚠️ Limitações Matricial:
+                Limitações Matricial:
               </h3>
               <ul className="text-white/80 text-sm space-y-1">
                 <li>• Perde qualidade ao ampliar</li>
@@ -293,74 +293,6 @@ export default function VectorPage() {
                 <li>• Pixelização visível</li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        {/* Information Section */}
-        <div className="mt-12 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">
-            📚 Diferenças Principais
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold text-green-400 mb-4">
-                🎯 Imagens Vetoriais
-              </h3>
-              <div className="space-y-3 text-white/80">
-                <p>
-                  <strong>Formato:</strong> SVG, AI, EPS
-                </p>
-                <p>
-                  <strong>Base:</strong> Matemática (pontos, linhas, curvas)
-                </p>
-                <p>
-                  <strong>Escalabilidade:</strong> Infinita sem perda de
-                  qualidade
-                </p>
-                <p>
-                  <strong>Uso:</strong> Logos, ícones, ilustrações
-                </p>
-                <p>
-                  <strong>Edição:</strong> Fácil modificação de formas
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-blue-400 mb-4">
-                📸 Imagens Matriciais
-              </h3>
-              <div className="space-y-3 text-white/80">
-                <p>
-                  <strong>Formato:</strong> JPG, PNG, GIF, BMP
-                </p>
-                <p>
-                  <strong>Base:</strong> Pixels (grade de pontos coloridos)
-                </p>
-                <p>
-                  <strong>Escalabilidade:</strong> Limitada pela resolução
-                </p>
-                <p>
-                  <strong>Uso:</strong> Fotografias, texturas, imagens complexas
-                </p>
-                <p>
-                  <strong>Edição:</strong> Modificação pixel por pixel
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 p-6 bg-yellow-500/20 rounded-lg border border-yellow-500/30">
-            <h3 className="text-yellow-400 font-semibold mb-3">
-              💡 Dica Importante
-            </h3>
-            <p className="text-white/90">
-              Experimente aumentar o zoom nas duas imagens acima. A imagem
-              vetorial mantém a qualidade perfeita em qualquer escala, enquanto
-              a matricial começa a mostrar pixels individuais quando ampliada
-              demais.
-            </p>
           </div>
         </div>
       </div>

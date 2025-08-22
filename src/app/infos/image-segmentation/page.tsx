@@ -41,7 +41,6 @@ export default function ImageSegmentationPage() {
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-purple-400">📚</span>
                 História
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
@@ -67,7 +66,6 @@ export default function ImageSegmentationPage() {
             {/* Teoria */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-blue-400">🧮</span>
                 Algoritmos Principais
               </h2>
               <div className="text-white/80 space-y-6">
@@ -143,13 +141,12 @@ export default function ImageSegmentationPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-green-400">💡</span>
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎨 Photoshop
+                    Photoshop
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     A ferramenta "Magic Wand" do Photoshop usa uma variação do
@@ -159,7 +156,7 @@ export default function ImageSegmentationPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🏥 Medicina
+                    Medicina
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Segmentação é crucial em tomografia computadorizada para
@@ -169,7 +166,7 @@ export default function ImageSegmentationPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🤖 Visão Computacional
+                    Visão Computacional
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Carros autônomos usam segmentação para identificar
@@ -179,7 +176,7 @@ export default function ImageSegmentationPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🛰️ Satélites
+                    Satélites
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Imagens de satélite são segmentadas para mapear uso do solo,
@@ -192,12 +189,10 @@ export default function ImageSegmentationPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-yellow-400">🔧</span>
                 Aplicações Práticas
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🏥</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Diagnóstico Médico
@@ -210,7 +205,6 @@ export default function ImageSegmentationPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🚗</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Veículos Autônomos
@@ -223,7 +217,6 @@ export default function ImageSegmentationPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🏭</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Controle de Qualidade
@@ -236,7 +229,6 @@ export default function ImageSegmentationPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎮</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Jogos e Entretenimento
@@ -249,7 +241,6 @@ export default function ImageSegmentationPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🔬</span>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Pesquisa Científica
@@ -266,7 +257,6 @@ export default function ImageSegmentationPage() {
             {/* Demo Link */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-red-400">🎯</span>
                 Experimente na Prática
               </h2>
               <div className="text-center">
@@ -278,7 +268,7 @@ export default function ImageSegmentationPage() {
                   onClick={() => router.push("/segmentation")}
                   className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/40"
                 >
-                  🎯 Acessar Ferramenta de Segmentação
+                  Acessar Ferramenta de Segmentação
                 </button>
               </div>
             </section>

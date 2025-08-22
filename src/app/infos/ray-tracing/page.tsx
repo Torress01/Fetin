@@ -40,7 +40,7 @@ export default function RayTracingPage() {
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-purple-400">📚</span>
+
                 História
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
@@ -67,7 +67,7 @@ export default function RayTracingPage() {
             {/* Teoria */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-blue-400">🧮</span>
+
                 Como Funciona
               </h2>
               <div className="text-white/80 space-y-6">
@@ -148,13 +148,13 @@ export default function RayTracingPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-green-400">💡</span>
+
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎮 Jogos Modernos
+                    Jogos Modernos
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Jogos como Cyberpunk 2077 e Control usam ray tracing para
@@ -164,7 +164,7 @@ export default function RayTracingPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🎬 Filmes
+                    Filmes
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Studios como Pixar usam ray tracing para renderizar seus
@@ -174,7 +174,7 @@ export default function RayTracingPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    ⚡ Performance
+                    Performance
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Ray tracing é computacionalmente intensivo - um frame pode
@@ -184,7 +184,7 @@ export default function RayTracingPage() {
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    🔬 Pesquisa
+                    Pesquisa
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed">
                     Pesquisadores usam ray tracing para simular propagação de
@@ -197,12 +197,12 @@ export default function RayTracingPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="text-yellow-400">🔧</span>
+
                 Aplicações Atuais
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎮</span>
+              
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Jogos
@@ -215,7 +215,7 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🎬</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Cinema
@@ -228,7 +228,7 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🏗️</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Arquitetura
@@ -241,7 +241,7 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🚗</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Automotivo
@@ -254,7 +254,7 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl">🔬</span>
+
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Ciência

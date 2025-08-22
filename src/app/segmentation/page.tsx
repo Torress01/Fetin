@@ -394,11 +394,11 @@ export default function SegmentationPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 p-8">
+    <div className="min-h-screen bg-gradient-to-t from-slate-900 to-gray-700 p-8">
       {/* Back button */}
       <Link
         href="/"
-        className="fixed top-5 left-5 z-50 bg-white/90 text-blue-900 px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-lg"
+        className="fixed top-5 left-5 z-50 text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-lg"
       >
         ← Voltar
       </Link>
@@ -409,7 +409,7 @@ export default function SegmentationPage() {
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-white mb-4">
-            🎯 Segmentação de Imagens
+            Segmentação de Imagens
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Ferramenta interativa para segmentação inteligente e manual de
@@ -418,166 +418,170 @@ export default function SegmentationPage() {
         </div>
 
         {/* Upload Section */}
-        <div
-          ref={uploadAreaRef}
-          className={`bg-white/10 border-2 border-dashed border-white/30 rounded-2xl p-10 text-center mb-8 backdrop-blur-md transition-all duration-300 ${
-            isDragging
-              ? "border-green-400 bg-green-400/10"
-              : "hover:border-white/50 hover:bg-white/15"
-          }`}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
-        >
-          <div className="text-6xl mb-6 opacity-70">
-            {imageLoaded ? "✅" : "📁"}
-          </div>
-          <div className="text-xl text-white mb-6">
-            {imageLoaded
-              ? "Imagem carregada com sucesso!"
-              : "Arraste uma imagem aqui ou clique para selecionar"}
-          </div>
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            onChange={handleFileSelect}
-            className="hidden"
-          />
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-green-500/40"
+        <div className="flex gap-10">
+          <div
+            ref={uploadAreaRef}
+            className={`bg-white/10 border-2 border-dashed border-white/30 rounded-2xl p-10 text-center mb-8 ${
+              isDragging
+                ? "border-green-400 bg-green-400/10"
+                : "hover:border-white/50 hover:bg-white/15"
+            }`}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
           >
-            {imageLoaded ? "Trocar Imagem" : "Escolher Imagem"}
-          </button>
-        </div>
-
-        {/* Tools Panel */}
-        {imageLoaded && (
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 border border-white/20">
-            {/* Mode Selection */}
-            <div className="flex flex-wrap items-center gap-6 mb-6">
-              <div className="flex items-center gap-4">
-                <label className="text-white font-semibold">Modo:</label>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setMode("smart")}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                      mode === "smart"
-                        ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white"
-                        : "bg-white/10 text-white hover:bg-white/20"
-                    }`}
-                  >
-                    🎯 Segmentação Inteligente
-                  </button>
-                  <button
-                    onClick={() => setMode("paint")}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                      mode === "paint"
-                        ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white"
-                        : "bg-white/10 text-white hover:bg-white/20"
-                    }`}
-                  >
-                    🖌️ Pincel Manual
-                  </button>
-                </div>
-              </div>
-
-              {/* Color Palette */}
-              <div className="flex items-center gap-4">
-                <label className="text-white font-semibold">Cores:</label>
-                <div className="flex gap-2">
-                  {colors.map((color) => (
-                    <button
-                      key={color.hex}
-                      onClick={() => setCurrentColor(color.hex)}
-                      className={`w-10 h-10 rounded-full border-3 transition-all duration-300 hover:scale-110 ${
-                        currentColor === color.hex
-                          ? "border-white scale-110"
-                          : "border-white/30"
-                      }`}
-                      style={{ backgroundColor: color.hex }}
-                      title={color.name}
-                    />
-                  ))}
-                </div>
-              </div>
+            <div className="text-4xl mb-6 opacity-70">
+              {imageLoaded ? "✅" : "📁"}
             </div>
-
-            {/* Controls */}
-            <div className="flex flex-wrap items-center gap-6 mb-6">
-              <div className="flex items-center gap-4">
-                <label className="text-white font-semibold">
-                  Tamanho do Pincel:
-                </label>
-                <input
-                  type="range"
-                  min="5"
-                  max="50"
-                  value={brushSize}
-                  onChange={(e) => setBrushSize(parseInt(e.target.value))}
-                  className="w-32 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <span className="text-white font-bold min-w-[40px]">
-                  {brushSize}px
-                </span>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <label className="text-white font-semibold">Tolerância:</label>
-                <input
-                  type="range"
-                  min="5"
-                  max="100"
-                  value={tolerance}
-                  onChange={(e) => setTolerance(parseInt(e.target.value))}
-                  className="w-32 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <span className="text-white font-bold min-w-[40px]">
-                  {tolerance}
-                </span>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <label className="text-white font-semibold">Opacidade:</label>
-                <input
-                  type="range"
-                  min="0.1"
-                  max="1"
-                  step="0.1"
-                  value={opacity}
-                  onChange={(e) => setOpacity(parseFloat(e.target.value))}
-                  className="w-32 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <span className="text-white font-bold min-w-[40px]">
-                  {Math.round(opacity * 100)}%
-                </span>
-              </div>
+            <div className="text-xl text-white mb-6">
+              {imageLoaded
+                ? "Imagem carregada com sucesso!"
+                : "Arraste uma imagem aqui ou clique para selecionar"}
             </div>
-
-            {/* Action Buttons */}
-            <div className="flex gap-4">
-              <button
-                onClick={clearSegmentation}
-                className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/40"
-              >
-                🗑️ Limpar Tudo
-              </button>
-              <button
-                onClick={undo}
-                className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/40"
-              >
-                ↶ Desfazer
-              </button>
-              <button
-                onClick={saveSegmentation}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-green-500/40"
-              >
-                💾 Salvar (3 imagens)
-              </button>
-            </div>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleFileSelect}
+              className="hidden"
+            />
+            <button
+              onClick={() => fileInputRef.current?.click()}
+              className="bg-gradient-to-r from-green-500 to-green-600 text-white mt-4 px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-green-500/40"
+            >
+              {imageLoaded ? "Trocar Imagem" : "Escolher Imagem"}
+            </button>
           </div>
-        )}
+
+          {/* Tools Panel */}
+          {imageLoaded && (
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 border border-white/20">
+              {/* Mode Selection */}
+              <div className="flex flex-wrap items-center gap-6 mb-6">
+                <div className="flex items-center gap-4">
+                  <label className="text-white font-semibold">Modo:</label>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setMode("smart")}
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                        mode === "smart"
+                          ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white"
+                          : "bg-white/10 text-white hover:bg-white/20"
+                      }`}
+                    >
+                      🎯 Segmentação Inteligente
+                    </button>
+                    <button
+                      onClick={() => setMode("paint")}
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                        mode === "paint"
+                          ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white"
+                          : "bg-white/10 text-white hover:bg-white/20"
+                      }`}
+                    >
+                      🖌️ Pincel Manual
+                    </button>
+                  </div>
+                </div>
+
+                {/* Color Palette */}
+                <div className="flex items-center gap-4">
+                  <label className="text-white font-semibold">Cores:</label>
+                  <div className="flex gap-2">
+                    {colors.map((color) => (
+                      <button
+                        key={color.hex}
+                        onClick={() => setCurrentColor(color.hex)}
+                        className={`w-10 h-10 rounded-full border-3 transition-all duration-300 hover:scale-110 ${
+                          currentColor === color.hex
+                            ? "border-white scale-110"
+                            : "border-white/30"
+                        }`}
+                        style={{ backgroundColor: color.hex }}
+                        title={color.name}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Controls */}
+              <div className="flex flex-wrap items-center gap-6 mb-6">
+                <div className="flex items-center gap-4">
+                  <label className="text-white font-semibold">
+                    Tamanho do Pincel:
+                  </label>
+                  <input
+                    type="range"
+                    min="5"
+                    max="50"
+                    value={brushSize}
+                    onChange={(e) => setBrushSize(parseInt(e.target.value))}
+                    className="w-32 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                  />
+                  <span className="text-white font-bold min-w-[40px]">
+                    {brushSize}px
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <label className="text-white font-semibold">
+                    Tolerância:
+                  </label>
+                  <input
+                    type="range"
+                    min="5"
+                    max="100"
+                    value={tolerance}
+                    onChange={(e) => setTolerance(parseInt(e.target.value))}
+                    className="w-32 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                  />
+                  <span className="text-white font-bold min-w-[40px]">
+                    {tolerance}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <label className="text-white font-semibold">Opacidade:</label>
+                  <input
+                    type="range"
+                    min="0.1"
+                    max="1"
+                    step="0.1"
+                    value={opacity}
+                    onChange={(e) => setOpacity(parseFloat(e.target.value))}
+                    className="w-32 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                  />
+                  <span className="text-white font-bold min-w-[40px]">
+                    {Math.round(opacity * 100)}%
+                  </span>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-4">
+                <button
+                  onClick={clearSegmentation}
+                  className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/40"
+                >
+                  🗑️ Limpar Tudo
+                </button>
+                <button
+                  onClick={undo}
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/40"
+                >
+                  ↶ Desfazer
+                </button>
+                <button
+                  onClick={saveSegmentation}
+                  className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-green-500/40"
+                >
+                  💾 Salvar (3 imagens)
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Canvas Container */}
         {imageLoaded && (

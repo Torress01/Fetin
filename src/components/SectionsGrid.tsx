@@ -51,12 +51,12 @@ export default function SectionsComponent() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-purple-400 bg-clip-text ">
             Computação Gráfica
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             Aprenda e visualize conceitos de computação gráfica em tempo real
-            usando ferramentas interativas para criar e manipular formas,
+            usando nossa ferramenta interativa para criar e manipular formas,
             animações e transformações.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function SectionsComponent() {
               ></div>
 
               {/* Header */}
-              <div className="relative flex flex-col items-center justify-center mb-4 z-10">
+              <div className="relative flex gap-4 items-center justify-center mb-4 z-10">
                 <div
                   className={`w-16 h-16 bg-gradient-to-br rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300 ${getColorClasses(
                     tool.color
@@ -94,7 +94,7 @@ export default function SectionsComponent() {
               </div>
 
               {/* Description */}
-              <p className="relative text-white/80 mb-4 leading-relaxed text-center z-10">
+              <p className="relative text-white/80 mb-7 leading-relaxed text-center z-10">
                 {tool.description}
               </p>
 
@@ -103,7 +103,7 @@ export default function SectionsComponent() {
                 {tool.features.map((feature) => (
                   <span
                     key={feature}
-                    className="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm border border-white/20 hover:scale-105 transition-transform duration-300"
+                    className="bg-slate-900 text-white/90 px-3 py-1 rounded-full text-sm border border-white/20 hover:scale-105 transition-transform duration-300"
                   >
                     {feature}
                   </span>
@@ -111,7 +111,7 @@ export default function SectionsComponent() {
               </div>
 
               {/* CTA */}
-              <div className="relative flex items-center justify-center gap-2 z-10">
+              <div className="relative flex items-center justify-center gap-2 mt-10 z-10">
                 <span className="text-white/60 text-sm">
                   Clique para explorar
                 </span>
