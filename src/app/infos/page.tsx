@@ -123,31 +123,31 @@ export default function InfosPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col text-center px-8 pt-36 relative bg-slate-900 overflow-hidden">
+    <div className="min-h-screen flex flex-col text-center px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 relative bg-slate-900 overflow-hidden">
       {/* Header */}
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 text-center text-white relative z-10">
-        <div className="max-w-7xl mx-auto px-5 pt-20">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-purple-300 to-blue-400 bg-clip-text text-transparent drop-shadow-2xl leading-tight">
+      <section className="py-16 sm:py-20 text-center text-white relative z-10">
+        <div className="max-w-5xl mx-auto px-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-purple-300 to-blue-400 bg-clip-text text-transparent drop-shadow-2xl leading-tight">
             Explorando Computação Gráfica & Multimídia
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10 animate-fade-in delay-200">
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8 sm:mb-10 animate-fade-in delay-200">
             Mergulhe fundo nos conceitos teóricos através de explicações
             interativas, exemplos práticos e recursos complementares
           </p>
 
           {/* Search Box */}
-          <div className="max-w-2xl mx-auto relative animate-fade-in delay-400">
+          <div className="w-full max-w-xl mx-auto relative animate-fade-in delay-400">
             <input
               type="text"
               placeholder="Buscar conceitos..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-5 py-4 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 focus:-translate-y-0.5 transition-all duration-300 shadow-xl"
+              className="w-full px-5 py-3 sm:py-4 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 focus:-translate-y-0.5 transition-all duration-300 shadow-xl text-sm sm:text-base"
             />
-            <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/10 w-40 h-10 rounded-full text-white cursor-pointer">
+            <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/10 px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm text-white cursor-pointer">
               Procurar
             </button>
           </div>
@@ -156,16 +156,16 @@ export default function InfosPage() {
 
       {/* Main Content */}
       <main className="bg-black/20 rounded-t-3xl relative z-10 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-5 py-10 sm:py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
           {/* Filter Tabs */}
-          <div className="mb-10 sm:mb-16">
-            <div className="mx-auto max-w-full overflow-x-auto no-scrollbar">
-              <div className="inline-flex min-w-max items-center gap-2 rounded-full p-1 border border-white/10 bg-white/5">
+          <div className="mb-8 sm:mb-12">
+            <div className="overflow-x-auto no-scrollbar">
+              <div className="inline-flex min-w-max gap-2 p-1 rounded-full border border-white/10 bg-white/5">
                 {categories.map((category) => (
                   <button
                     key={category}
                     onClick={() => setActiveCategory(category)}
-                    className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                    className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap ${
                       activeCategory === category
                         ? "bg-white/10 text-white border border-white/20"
                         : "text-white/70 hover:text-white hover:bg-white/10"
@@ -179,7 +179,7 @@ export default function InfosPage() {
           </div>
 
           {/* Concepts Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 sm:gap-8">
             {filteredConcepts.map((concept, index) => (
               <div
                 key={index}
@@ -188,7 +188,7 @@ export default function InfosPage() {
               >
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500/70 to-blue-600/70 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
 
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center text-2xl text-white mb-4 sm:mb-5 border border-white/10">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center text-xl sm:text-2xl text-white mb-4 sm:mb-5 border border-white/10">
                   {concept.icon}
                 </div>
 
@@ -198,7 +198,7 @@ export default function InfosPage() {
                   </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                   {concept.title}
                 </h3>
 
