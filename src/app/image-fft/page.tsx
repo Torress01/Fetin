@@ -569,7 +569,7 @@ export default function ImageFFTPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-slate-900 to-gray-700 p-8">
+    <div className="min-h-screen bg-slate-900 p-8">
       {/* Back button */}
       <Link
         href="/"
@@ -578,7 +578,7 @@ export default function ImageFFTPage() {
         ← Voltar
       </Link>
 
-      <div className="max-w-7xl mx-auto bg-gradient-to-t from-slate-900 to-gray-700 rounded-xl p-10 shadow-2xl backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto bg-slate-900 to-gray-700 rounded-xl p-10 shadow-2xl backdrop-blur-sm">
         <h1 className="text-4xl font-bold text-center text-white mb-10 mt-0">
           Editor de Imagens FFT
         </h1>
@@ -586,7 +586,7 @@ export default function ImageFFTPage() {
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Original Image Section */}
           <div className="flex-1">
-            <div className="bg-slate-600 p-5 rounded-xl shadow-lg">
+            <div className="bg-slate-800 p-5 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Imagem Original
               </h3>
@@ -611,7 +611,7 @@ export default function ImageFFTPage() {
 
           {/* FFT Domain Section */}
           <div className="flex-1">
-            <div className="bg-slate-600 p-5 rounded-xl shadow-lg">
+            <div className="bg-slate-800 p-5 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Domínio da Frequência
               </h3>

@@ -123,7 +123,7 @@ export default function VectorPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-gray-700 text-white p-8">
+    <div className="min-h-screen bg-slate-900 text-white p-8">
       {/* Back button */}
       <Link
         href="/"
@@ -145,15 +145,15 @@ export default function VectorPage() {
         </div>
 
         {/* Comparison Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Vector Section */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">
               Imagem Vetorial
             </h2>
-            <div className="bg-white/5 rounded-xl p-6 mb-6">
+            <div className="bg-white/5 rounded-xl p-4 md:p-6 mb-6">
               <div className="flex justify-center mb-4">
-                <div className="w-[300px] h-[300px] flex items-center justify-center overflow-hidden border-2 border-dashed border-white/30 rounded-lg">
+                <div className="w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] flex items-center justify-center overflow-hidden border-2 border-dashed border-white/30 rounded-lg">
                   <svg
                     ref={vectorImageRef}
                     width="150"
@@ -237,13 +237,13 @@ export default function VectorPage() {
           </div>
 
           {/* Raster Section */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">
               Imagem Matricial
             </h2>
-            <div className="bg-white/5 rounded-xl p-6 mb-6">
+            <div className="bg-white/5 rounded-xl p-4 md:p-6 mb-6">
               <div className="flex justify-center mb-4">
-                <div className="w-[300px] h-[300px] flex items-center justify-center overflow-hidden border-2 border-dashed border-white/30 rounded-lg">
+                <div className="w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] flex items-center justify-center overflow-hidden border-2 border-dashed border-white/30 rounded-lg">
                   <canvas
                     ref={rasterCanvasRef}
                     width="150"

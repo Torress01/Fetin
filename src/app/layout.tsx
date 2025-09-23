@@ -5,9 +5,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CG Playground - Explore Computação Gráfica",
+  title: "Pixel Forge - Explore Computação Gráfica",
   description:
     "Uma plataforma moderna para aprender e experimentar conceitos de computação gráfica e multimídia através de ferramentas visuais e interativas.",
+  icons: {
+    icon: "./images/favicon.svg",
+  },
 };
 
 export default function RootLayout({

@@ -230,7 +230,7 @@ export default function CompressPage() {
   };
 
   return (
-    <div className="min-h-screen  bg-gradient-to-r from-slate-900 to-gray-700 p-8">
+    <div className="min-h-screen bg-slate-900 p-8">
       {/* Back button */}
       <Link
         href="/"

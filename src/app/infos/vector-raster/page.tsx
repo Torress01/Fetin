@@ -40,188 +40,189 @@ export default function VectorRasterPage() {
           <div className="space-y-16">
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                História e Evolução
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
+                História
               </h2>
-              <div className="text-white/80 space-y-4 leading-relaxed">
-                <p>
-                  As imagens matriciais (raster) surgiram com os primeiros
-                  computadores gráficos na década de 1960, quando a tecnologia
-                  de display baseada em pixels se tornou disponível. O formato
-                  bitmap foi desenvolvido para representar imagens como uma
-                  grade de pixels coloridos.
-                </p>
-                <p>
-                  As imagens vetoriais foram desenvolvidas na década de 1970,
-                  com o surgimento de linguagens de descrição de página como
-                  PostScript. O formato SVG (Scalable Vector Graphics) foi
-                  padronizado pela W3C em 2001, revolucionando a web com
-                  gráficos escaláveis.
-                </p>
-                <p>
-                  A evolução dos formatos de imagem tem sido marcada pela busca
-                  do equilíbrio entre qualidade, tamanho de arquivo e
-                  flexibilidade de uso, resultando em formatos especializados
-                  para diferentes aplicações.
-                </p>
-              </div>
-            </section>
-
-            {/* Comparação Técnica */}
-            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Comparação Técnica
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Vetorial */}
-                <div className="bg-green-500/10 rounded-xl p-6 border border-green-500/20">
-                  <h3 className="text-2xl font-bold text-green-400 mb-4">
-                    Imagens Vetoriais
-                  </h3>
-                  <div className="space-y-3 text-white/80">
-                    <div>
-                      <strong className="text-green-300">Formato:</strong>
-                      <p>SVG, AI, EPS, PDF</p>
-                    </div>
-                    <div>
-                      <strong className="text-green-300">
-                        Base Matemática:
-                      </strong>
-                      <p>Pontos, linhas, curvas de Bézier</p>
-                    </div>
-                    <div>
-                      <strong className="text-green-300">
-                        Escalabilidade:
-                      </strong>
-                      <p>Infinita sem perda de qualidade</p>
-                    </div>
-                    <div>
-                      <strong className="text-green-300">
-                        Tamanho de Arquivo:
-                      </strong>
-                      <p>Geralmente menor</p>
-                    </div>
-                    <div>
-                      <strong className="text-green-300">Edição:</strong>
-                      <p>Modificação de formas e propriedades</p>
-                    </div>
-                  </div>
+              <div className="mb-6">
+                <div className="lg:col-span-2 text-white/80 space-y-4 leading-relaxed">
+                  <p>
+                    As imagens matriciais surgiram na década de 1960 com os
+                    primeiros displays baseados em pixel. O termo bitmap
+                    consolidou a ideia de uma grade de pontos que formam a
+                    imagem.
+                  </p>
+                  <p>
+                    As imagens vetoriais ganharam força nos anos 1970-80 com
+                    PostScript e sistemas de diagramação. Na web, o
+                    <strong className="text-white"> SVG</strong> (2001) tornou
+                    gráficos vetoriais escaláveis um padrão.
+                  </p>
+                  <p>
+                    Hoje, ambos os paradigmas coexistem: vetores para formas
+                    nítidas e escaláveis; raster para fotos e texturas ricas em
+                    detalhe.
+                  </p>
                 </div>
+              </div>
 
-                {/* Matricial */}
-                <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-500/20">
-                  <h3 className="text-2xl font-bold text-blue-400 mb-4">
-                    Imagens Matriciais
-                  </h3>
-                  <div className="space-y-3 text-white/80">
-                    <div>
-                      <strong className="text-blue-300">Formato:</strong>
-                      <p>JPG, PNG, GIF, BMP, TIFF</p>
-                    </div>
-                    <div>
-                      <strong className="text-blue-300">
-                        Base Matemática:
-                      </strong>
-                      <p>Grade de pixels coloridos</p>
-                    </div>
-                    <div>
-                      <strong className="text-blue-300">Escalabilidade:</strong>
-                      <p>Limitada pela resolução</p>
-                    </div>
-                    <div>
-                      <strong className="text-blue-300">
-                        Tamanho de Arquivo:
-                      </strong>
-                      <p>Geralmente maior</p>
-                    </div>
-                    <div>
-                      <strong className="text-blue-300">Edição:</strong>
-                      <p>Modificação pixel por pixel</p>
-                    </div>
+              {/* Timeline */}
+              <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                <h3 className="text-lg font-semibold text-white mb-4">
+                  Marcos
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-white font-medium">1960s:</span>
+                    <span className="text-white/80">Displays raster</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-white font-medium">1980s:</span>
+                    <span className="text-white/80">PostScript e DTP</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-white font-medium">2001:</span>
+                    <span className="text-white/80">W3C padroniza SVG</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span className="text-white font-medium">Hoje:</span>
+                    <span className="text-white/80">
+                      Coexistência vetorial/raster
+                    </span>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Aplicações */}
+            {/* Princípios Fundamentais */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Aplicações Práticas
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
+                Princípios Fundamentais
               </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-green-400 mb-4">
-                    Quando Usar Vetorial
-                  </h3>
-                  <div className="space-y-3 text-white/80">
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Logos e Identidade Visual</strong>
-                        <p className="text-sm">
-                          Escalabilidade para diferentes tamanhos
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Ícones e UI</strong>
-                        <p className="text-sm">
-                          Adaptação para diferentes resoluções
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Gráficos e Diagramas</strong>
-                        <p className="text-sm">
-                          Precisão matemática e edição fácil
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Ilustrações Técnicas</strong>
-                        <p className="text-sm">
-                          Linhas limpas e formas precisas
-                        </p>
-                      </div>
-                    </div>
+              <div className="text-white/80 space-y-6">
+                <div className="flex text-center gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      Conceitos-Chave
+                    </h3>
+                    <p className="leading-relaxed mb-4">
+                      O vetor descreve formas por equações; o raster descreve
+                      cores em uma grade de pixels. Alguns fundamentos:
+                    </p>
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-400 mb-4">
-                    Quando Usar Matricial
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      Resolução & DPI
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      No raster, qualidade depende da densidade de pixels.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      Escalabilidade
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Vetores escalam sem perda; raster pixeliza ao ampliar.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      Amostragem & Anti-aliasing
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Suaviza bordas serrilhadas em raster; vetores rendem
+                      contornos nítidos.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                      Interpolação
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Métodos (nearest, bilinear, bicubic) ao redimensionar
+                      raster.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    Modelo Raster Simplificado
                   </h3>
-                  <div className="space-y-3 text-white/80">
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Fotografias</strong>
-                        <p className="text-sm">
-                          Captura de detalhes e texturas
-                        </p>
-                      </div>
+                  <p className="leading-relaxed mb-4">
+                    Uma imagem raster pode ser vista como uma função amostrada
+                    no plano:
+                  </p>
+                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
+                    I(x,y) = cor[pixel(x,y)]
+                    <br />
+                    <span className="text-white/60">
+                      // x,y inteiros na grade
+                    </span>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Formatos</h4>
+                    <p className="text-sm text-white/60">SVG, PNG, JPEG, PDF</p>
+                  </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Uso</h4>
+                    <p className="text-sm text-white/60">
+                      UI, logos, fotos, texturas
+                    </p>
+                  </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Qualidade</h4>
+                    <p className="text-sm text-white/60">
+                      Depende de escala e resolução
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Vídeo Educativos */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Vídeo Educativos
+              </h2>
+              <div className="flex justify-center">
+                <div className="bg-black/20 rounded-lg overflow-hidden border border-white/10">
+                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-4xl mb-2">▶</div>
+                      <p className="text-white text-sm">Vector vs Raster</p>
+                      <a
+                        href="https://www.youtube.com/watch?v=QCNrL1YV1oQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 text-xs underline"
+                      >
+                        Assistir no YouTube
+                      </a>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Arte Digital</strong>
-                        <p className="text-sm">Pintura e efeitos artísticos</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Texturas e Materiais</strong>
-                        <p className="text-sm">Detalhes realistas para 3D</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <strong>Capturas de Tela</strong>
-                        <p className="text-sm">
-                          Representação exata do que é visto
-                        </p>
-                      </div>
-                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-white/80 text-sm">
+                      Explicação visual das diferenças entre imagens vetoriais e
+                      matriciais
+                    </p>
                   </div>
                 </div>
               </div>
@@ -229,7 +230,7 @@ export default function VectorRasterPage() {
 
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -237,10 +238,9 @@ export default function VectorRasterPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Web Moderna
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    O SVG revolucionou a web ao permitir gráficos escaláveis que
-                    se adaptam a qualquer resolução de tela, desde smartphones
-                    até monitores 4K.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    SVG possibilita ícones e ilustrações escaláveis em qualquer
+                    densidade de tela.
                   </p>
                 </div>
 
@@ -248,10 +248,9 @@ export default function VectorRasterPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Photoshop
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    O Photoshop trabalha principalmente com imagens matriciais,
-                    mas inclui ferramentas vetoriais como &quot;Shape
-                    Layers&quot; para combinar os dois mundos.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    Combina raster com vetores via camadas de forma para fluxos
+                    híbridos.
                   </p>
                 </div>
 
@@ -259,10 +258,9 @@ export default function VectorRasterPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Responsividade
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Ícones vetoriais são essenciais para apps modernos, pois se
-                    adaptam automaticamente a diferentes densidades de pixel
-                    (1x, 2x, 3x).
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    Vetores mantêm nitidez em dispositivos 1x, 2x, 3x sem
+                    múltiplos assets.
                   </p>
                 </div>
 
@@ -270,31 +268,79 @@ export default function VectorRasterPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Impressão
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Para impressão em alta qualidade, imagens matriciais
-                    precisam ter resolução adequada (300 DPI), enquanto
-                    vetoriais mantêm qualidade independente do tamanho.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    Raster requer DPI adequado; vetores mantêm qualidade em
+                    qualquer tamanho.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Demo Link */}
+            {/* Recursos e Referências */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                Referências
+              </h2>
+              <div className="space-y-3">
+                <a
+                  href="https://en.wikipedia.org/wiki/Vector_graphics"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                >
+                  <h4 className="text-white font-medium mb-1">
+                    Wikipedia - Vector graphics
+                  </h4>
+                  <p className="text-white/60 text-sm">
+                    Introdução completa a gráficos vetoriais
+                  </p>
+                </a>
+
+                <a
+                  href="https://en.wikipedia.org/wiki/Raster_graphics"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                >
+                  <h4 className="text-white font-medium mb-1">
+                    Wikipedia - Raster graphics
+                  </h4>
+                  <p className="text-white/60 text-sm">
+                    Fundamentos de imagens matriciais
+                  </p>
+                </a>
+
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/SVG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                >
+                  <h4 className="text-white font-medium mb-1">MDN - SVG</h4>
+                  <p className="text-white/60 text-sm">
+                    Documentação do SVG para a Web
+                  </p>
+                </a>
+              </div>
+            </section>
+
+            {/* Demo Link */}
+            <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Experimente na Prática
               </h2>
               <div className="text-center">
                 <p className="text-white/80 mb-6">
-                  Teste nossa ferramenta interativa para comparar a qualidade de
-                  imagens vetoriais e matriciais em diferentes níveis de zoom.
+                  Compare vetorial e matricial com diferentes níveis de zoom.
                 </p>
-                <button
-                  onClick={() => router.push("/vector")}
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/40"
-                >
-                  Acessar Comparador Vetorial vs Matricial
-                </button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => router.push("/vector")}
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:opacity-60 cursor-pointer"
+                  >
+                    Ferramenta Interativa
+                  </button>
+                </div>
               </div>
             </section>
           </div>

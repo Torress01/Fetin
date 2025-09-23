@@ -221,17 +221,6 @@ export default function SegmentationPage() {
     return Math.sqrt(dr * dr + dg * dg + db * db);
   };
 
-  const hexToRgb = (hex: string) => {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result
-      ? {
-          r: parseInt(result[1], 16),
-          g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16),
-        }
-      : null;
-  };
-
   const floodFill = (
     startX: number,
     startY: number,
@@ -315,12 +304,6 @@ export default function SegmentationPage() {
 
     if (!imageCanvas || !segmentationCanvas) return;
 
-    // 1. Salvar imagem original
-    const originalLink = document.createElement("a");
-    originalLink.download = `original_${timestamp}.png`;
-    originalLink.href = imageCanvas.toDataURL();
-    originalLink.click();
-
     // Aguardar um pouco antes do próximo download
     setTimeout(() => {
       // 2. Salvar apenas a segmentação (com fundo transparente)
@@ -352,7 +335,7 @@ export default function SegmentationPage() {
         compositeLink.click();
 
         // Mostrar mensagem de sucesso
-        alert("3 imagens salvas:\n- Original\n- Segmentação\n- Composição");
+        alert("2 imagens salvas:\n- Segmentação\n- Composição");
       }, 500);
     }, 500);
   };
@@ -394,11 +377,11 @@ export default function SegmentationPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-slate-900 to-gray-700 p-8">
+    <div className="min-h-screen bg-slate-900  p-8">
       {/* Back button */}
       <Link
         href="/"
-        className="fixed top-5 left-5 z-50 text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-lg"
+        className="fixed top-5 left-5 z-50 text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 cursor-pointer"
       >
         ← Voltar
       </Link>
@@ -469,7 +452,7 @@ export default function SegmentationPage() {
                           : "bg-white/10 text-white hover:bg-white/20"
                       }`}
                     >
-                      🎯 Segmentação Inteligente
+                      Segmentação Inteligente
                     </button>
                     <button
                       onClick={() => setMode("paint")}
@@ -479,7 +462,7 @@ export default function SegmentationPage() {
                           : "bg-white/10 text-white hover:bg-white/20"
                       }`}
                     >
-                      🖌️ Pincel Manual
+                      Pincel Manual
                     </button>
                   </div>
                 </div>
@@ -564,7 +547,7 @@ export default function SegmentationPage() {
                   onClick={clearSegmentation}
                   className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/40"
                 >
-                  🗑️ Limpar Tudo
+                  Limpar Tudo
                 </button>
                 <button
                   onClick={undo}
@@ -576,7 +559,7 @@ export default function SegmentationPage() {
                   onClick={saveSegmentation}
                   className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-green-500/40"
                 >
-                  💾 Salvar (3 imagens)
+                  Salvar (2 imagens)
                 </button>
               </div>
             </div>

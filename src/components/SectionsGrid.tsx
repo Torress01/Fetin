@@ -30,22 +30,22 @@ const tools: ToolCard[] = [
 const getColorClasses = (color: string) => {
   switch (color) {
     case "purple":
-      return "from-purple-500/30 to-purple-500/10 hover:shadow-purple-500/20 hover:border-purple-500/50";
+      return "from-purple-500/20 to-purple-500/5 hover:shadow-purple-500/10 hover:border-purple-500/30";
     case "blue":
-      return "from-blue-500/30 to-blue-500/10 hover:shadow-blue-500/20 hover:border-blue-500/50";
+      return "from-blue-500/20 to-blue-500/5 hover:shadow-blue-500/10 hover:border-blue-500/30";
     case "green":
-      return "from-green-500/30 to-green-500/10 hover:shadow-green-500/20 hover:border-green-500/50";
+      return "from-green-500/20 to-green-500/5 hover:shadow-green-500/10 hover:border-green-500/30";
     case "orange":
-      return "from-orange-500/30 to-orange-500/10 hover:shadow-orange-500/20 hover:border-orange-500/50";
+      return "from-orange-500/20 to-orange-500/5 hover:shadow-orange-500/10 hover:border-orange-500/30";
     default:
-      return "from-purple-500/30 to-purple-500/10 hover:shadow-purple-500/20 hover:border-purple-500/50";
+      return "from-purple-500/20 to-purple-500/5 hover:shadow-purple-500/10 hover:border-purple-500/30";
   }
 };
 
 export default function SectionsComponent() {
   return (
     <section
-      id="section-canvas"
+      id="graphics"
       className="py-24 px-8 bg-gradient-to-b from-slate-900 to-black"
     >
       <div className="max-w-7xl mx-auto">
@@ -68,17 +68,10 @@ export default function SectionsComponent() {
             <Link
               key={index}
               href={tool.href}
-              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl aspect-square flex flex-col items-center justify-center p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-white/20 ${getColorClasses(
+              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl aspect-square flex flex-col items-center justify-center p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-white/15 ${getColorClasses(
                 tool.color
               )}`}
             >
-              {/* Gradient overlay on hover */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${getColorClasses(
-                  tool.color
-                )}`}
-              ></div>
-
               {/* Header */}
               <div className="relative flex gap-4 items-center justify-center mb-4 z-10">
                 <div
@@ -88,7 +81,7 @@ export default function SectionsComponent() {
                 >
                   {tool.icon}
                 </div>
-                <h3 className="mt-2 text-2xl font-bold text-white group-hover:text-white transition-colors duration-300 text-center">
+                <h3 className="mt-2 text-2xl font-bold text-white transition-colors duration-300 text-center">
                   {tool.title}
                 </h3>
               </div>

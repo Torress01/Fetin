@@ -7,11 +7,27 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Smooth scrolling - MANTER (útil para navegação) */
 html {
   scroll-behavior: smooth;
+}
+
+/* A11y: foco visível mais sutil e consistente */
+*:focus-visible {
+  outline: 2px solid rgba(147, 197, 253, 0.6); /* sky-300 */
+  outline-offset: 2px;
+}
+
+/* Imagens responsivas por padrão */
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Custom scrollbar - MANTER (visual customizado) */
@@ -143,4 +159,22 @@ html {
 }
 .animate-bounce-custom {
   animation: bounce 2s ease-in-out infinite;
+}
+
+/* No scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Respeita preferências de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

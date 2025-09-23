@@ -41,117 +41,190 @@ export default function ColorSpacesPage() {
           <div className="space-y-16">
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
                 História
               </h2>
-              <div className="text-white/80 space-y-4 leading-relaxed">
-                <p>
-                  O estudo científico das cores começou com Isaac Newton em
-                  1672, quando ele descobriu que a luz branca pode ser
-                  decomposta em cores através de um prisma.
-                </p>
-                <p>
-                  Em 1931, a CIE (Commission Internationale de l&apos;Éclairage)
-                  definiu o primeiro espaço de cor padrão, o CIE XYZ, baseado em
-                  experimentos com observadores humanos.
-                </p>
-                <p>
-                  O RGB foi desenvolvido para televisão colorida na década de
-                  1950. O CMYK foi criado para impressão offset, e o HSV foi
-                  desenvolvido na década de 1970 para ser mais intuitivo para
-                  designers.
-                </p>
+              <div className="mb-6">
+                <div className="lg:col-span-2 text-white/80 space-y-4 leading-relaxed">
+                  <p>
+                    O estudo científico das cores começou com Newton (1672), que
+                    demonstrou a decomposição da luz branca por um prisma.
+                  </p>
+                  <p>
+                    Em 1931, a <strong className="text-white">CIE</strong>{" "}
+                    definiu o espaço CIE XYZ a partir de experimentos
+                    psicofísicos, base para diversos modelos modernos.
+                  </p>
+                  <p>
+                    RGB popularizou-se em displays; CMYK em impressão; HSV foi
+                    proposto para ser mais intuitivo a designers.
+                  </p>
+                </div>
+              </div>
+
+              {/* Timeline */}
+              <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                <h3 className="text-lg font-semibold text-white mb-4">
+                  Marcos
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-white font-medium">1672:</span>
+                    <span className="text-white/80">Newton e o prisma</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-white font-medium">1931:</span>
+                    <span className="text-white/80">CIE XYZ</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-white font-medium">1950s:</span>
+                    <span className="text-white/80">RGB em TV</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span className="text-white font-medium">1996:</span>
+                    <span className="text-white/80">sRGB para a web</span>
+                  </div>
+                </div>
               </div>
             </section>
 
-            {/* Teoria */}
+            {/* Princípios Fundamentais */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Modelos de Cor
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
+                Princípios Fundamentais
               </h2>
               <div className="text-white/80 space-y-6">
-                <div>
+                <div className="flex text-center gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      Modelos Clássicos
+                    </h3>
+                    <p className="leading-relaxed mb-4">
+                      Modelos de cor representam a cor em bases diferentes:
+                      aditiva (RGB), subtrativa (CMYK) e perceptual (HSV/HSB).
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      RGB (aditivo)
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Combina luz vermelha, verde e azul.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      CMYK (subtrativo)
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Define tintas que subtraem luz do branco.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      HSV (perceptual)
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Separa matiz, saturação e valor (brilho).
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                      Gestão de Cor
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Perfis ICC e calibração de dispositivos.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    RGB (Red, Green, Blue)
+                    Conversões
                   </h3>
                   <p className="leading-relaxed mb-4">
-                    Modelo aditivo usado em displays eletrônicos:
+                    Exemplo de combinação aditiva em RGB:
                   </p>
-                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
+                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
                     Cor = R × (255,0,0) + G × (0,255,0) + B × (0,0,255)
                     <br />
-                    Onde R, G, B ∈ [0, 255]
+                    <span className="text-white/60">// R,G,B ∈ [0,255]</span>
                   </div>
-                  <p className="leading-relaxed mt-4">
-                    Cada componente representa a intensidade da luz vermelha,
-                    verde ou azul.
-                  </p>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    CMYK (Cyan, Magenta, Yellow, Key)
-                  </h3>
-                  <p className="leading-relaxed mb-4">
-                    Modelo subtrativo usado em impressão:
-                  </p>
-                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                    Cor = Branco - C × Ciano - M × Magenta - Y × Amarelo - K ×
-                    Preto
-                    <br />
-                    Onde C, M, Y, K ∈ [0, 100]
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Perfis</h4>
+                    <p className="text-sm text-white/60">
+                      sRGB, Adobe RGB, DCI-P3
+                    </p>
                   </div>
-                  <p className="leading-relaxed mt-4">
-                    Representa a quantidade de tinta que deve ser subtraída do
-                    branco.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    HSV (Hue, Saturation, Value)
-                  </h3>
-                  <p className="leading-relaxed mb-4">
-                    Modelo intuitivo baseado na percepção humana:
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Hue (Matiz)
-                      </h4>
-                      <p className="text-sm">
-                        Ângulo no círculo cromático (0-360°)
-                      </p>
-                    </div>
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Saturation (Saturação)
-                      </h4>
-                      <p className="text-sm">Pureza da cor (0-100%)</p>
-                    </div>
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Value (Valor)
-                      </h4>
-                      <p className="text-sm">Brilho da cor (0-100%)</p>
-                    </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Uso</h4>
+                    <p className="text-sm text-white/60">
+                      Monitores, impressão, cinema
+                    </p>
+                  </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Ferramentas</h4>
+                    <p className="text-sm text-white/60">
+                      Color pickers e calibradores
+                    </p>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Conversor de Cores */}
+            {/* Vídeo Educativos */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Conversor de Cores Interativo
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Vídeo Educativos
               </h2>
 
-              <ColorConverter />
+              <div className="flex justify-center">
+                <div className="bg-black/20 rounded-lg overflow-hidden border border-white/10">
+                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-4xl mb-2">▶</div>
+                      <p className="text-white text-sm">
+                        Color Models Explained
+                      </p>
+                      <a
+                        href="https://www.youtube.com/watch?v=YqVvQf3R6bw"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 text-xs underline"
+                      >
+                        Assistir no YouTube
+                      </a>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-white/80 text-sm">
+                      Visão geral de RGB, CMYK e HSV
+                    </p>
+                  </div>
+                </div>
+              </div>
             </section>
 
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -159,19 +232,17 @@ export default function ColorSpacesPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Percepção
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    O olho humano pode distinguir aproximadamente 10 milhões de
-                    cores diferentes, mas apenas 200 tons de cinza.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    O olho distingue ~10 milhões de cores.
                   </p>
                 </div>
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    Arte Digital
+                    Padrões
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    O espaço de cor sRGB foi criado pela HP e Microsoft em 1996
-                    para padronizar cores na web e em monitores.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    sRGB (web), DCI-P3 (cinema), Adobe RGB (foto).
                   </p>
                 </div>
 
@@ -179,10 +250,8 @@ export default function ColorSpacesPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Displays
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Monitores modernos podem exibir mais cores que o sRGB,
-                    usando espaços como Adobe RGB e DCI-P3 para maior
-                    fidelidade.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    Monitores wide-gamut exibem gamas maiores.
                   </p>
                 </div>
 
@@ -190,81 +259,161 @@ export default function ColorSpacesPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Cinema
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    O DCI-P3 foi desenvolvido para cinema digital, oferecendo
-                    uma gama de cores 25% maior que sRGB.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    DCI-P3 cobre ~25% a mais que sRGB.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Aplicações */}
+            {/* Aplicações Modernas */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Aplicações Práticas
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Aplicações Modernas
               </h2>
-              <div className="text-white/80 space-y-4">
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Design Gráfico
-                    </h3>
-                    <p>
-                      Seleção precisa de cores para logos, layouts e identidade
-                      visual.
-                    </p>
+              <div className="grid lg:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Design Gráfico
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Identidade visual e consistência de cor.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Impressão
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Conversão de RGB→CMYK com perfis ICC.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Interfaces
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Acessibilidade e contraste WCAG.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className=" flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Cinema
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Color grading e exibição em múltiplos gamas.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Impressão
-                    </h3>
-                    <p>
-                      Conversão de cores digitais para tintas de impressão com
-                      fidelidade.
-                    </p>
+                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                  <h3 className="text-lg font-semibold text-white mb-4">
+                    Ferramentas
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">Photoshop</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">DaVinci Resolve</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">DisplayCAL</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">ICC Profiler</span>
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Interfaces
-                    </h3>
-                    <p>
-                      Design de interfaces com cores acessíveis e contrastes
-                      adequados.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Cinema
-                    </h3>
-                    <p>
-                      Grading de cor e correção para diferentes formatos de
-                      exibição.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Ciência
-                    </h3>
-                    <p>
-                      Análise de imagens médicas e científicas com cores
-                      precisas.
-                    </p>
+                  <div className="mt-6 pt-4 border-t border-white/10">
+                    <h4 className="text-white font-medium mb-3">
+                      Perfis Comuns
+                    </h4>
+                    <div className="grid grid-cols-1 gap-2 text-sm">
+                      <div className="text-white/60">• sRGB</div>
+                      <div className="text-white/60">• Adobe RGB</div>
+                      <div className="text-white/60">• DCI-P3</div>
+                      <div className="text-white/60">• Rec.709</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <ColorConverter />
+            </section>
+            {/* Recursos e Referências */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Referências
+              </h2>
+              <div className="">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-4">
+                    Livros e Artigos
+                  </h3>
+                  <div className="space-y-3">
+                    <a
+                      href="https://en.wikipedia.org/wiki/Color_space"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                    >
+                      <h4 className="text-white font-medium mb-1">
+                        Wikipedia - Color space
+                      </h4>
+                      <p className="text-white/60 text-sm">
+                        Visão geral de espaços de cor
+                      </p>
+                    </a>
+
+                    <a
+                      href="https://www.w3.org/TR/css-color-4/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                    >
+                      <h4 className="text-white font-medium mb-1">
+                        W3C - CSS Color
+                      </h4>
+                      <p className="text-white/60 text-sm">
+                        Especificações modernas de cor no CSS
+                      </p>
+                    </a>
+
+                    <a
+                      href="https://cie.co.at/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                    >
+                      <h4 className="text-white font-medium mb-1">CIE</h4>
+                      <p className="text-white/60 text-sm">
+                        Commission Internationale de l'Éclairage
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Demo Link */}
           </div>
         </div>
       </main>

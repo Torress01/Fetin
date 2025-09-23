@@ -123,14 +123,14 @@ export default function InfosPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-black to-gray-700 overflow-hidden">
+    <div className="min-h-screen flex flex-col text-center px-8 pt-36 relative bg-slate-900 overflow-hidden">
       {/* Header */}
       <Header />
 
       {/* Hero Section */}
       <section className="py-20 text-center text-white relative z-10">
         <div className="max-w-7xl mx-auto px-5 pt-20">
-          <h1 className="text-5xl font-extrabold mb-5 drop-shadow-lg animate-fade-in">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-purple-300 to-blue-400 bg-clip-text text-transparent drop-shadow-2xl leading-tight">
             Explorando Computação Gráfica & Multimídia
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10 animate-fade-in delay-200">
@@ -142,13 +142,13 @@ export default function InfosPage() {
           <div className="max-w-2xl mx-auto relative animate-fade-in delay-400">
             <input
               type="text"
-              placeholder="Buscar conceitos, algoritmos, técnicas..."
+              placeholder="Buscar conceitos..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-5 py-4 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-white/60 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 focus:-translate-y-0.5 transition-all duration-300 shadow-xl"
             />
-            <button className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white/10 w-10 h-10 rounded-full text-white hover:scale-110 transition-all duration-300 cursor-pointer">
-              🔍
+            <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/10 w-40 h-10 rounded-full text-white cursor-pointer">
+              Procurar
             </button>
           </div>
         </div>
@@ -156,59 +156,61 @@ export default function InfosPage() {
 
       {/* Main Content */}
       <main className="bg-black/20 rounded-t-3xl relative z-10 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-5 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-5 py-10 sm:py-16">
           {/* Filter Tabs */}
-          <div className="text-center mb-16">
-            <div className="inline-flex rounded-full p-1 border border-white/10">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer ${
-                    activeCategory === category
-                      ? "bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg"
-                      : "text-white/70 hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+          <div className="mb-10 sm:mb-16">
+            <div className="mx-auto max-w-full overflow-x-auto no-scrollbar">
+              <div className="inline-flex min-w-max items-center gap-2 rounded-full p-1 border border-white/10 bg-white/5">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setActiveCategory(category)}
+                    className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                      activeCategory === category
+                        ? "bg-white/10 text-white border border-white/20"
+                        : "text-white/70 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Concepts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
             {filteredConcepts.map((concept, index) => (
               <div
                 key={index}
                 onClick={() => handleConceptClick(concept.id)}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:-translate-y-2 hover:shadow-2xl hover:bg-white/10 transition-all duration-400 cursor-pointer group relative overflow-hidden border border-white/10"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-lg hover:bg-white/10 transition-all duration-300 cursor-pointer group relative overflow-hidden border border-white/10"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500/70 to-blue-600/70 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
 
-                <div className="w-15 h-15 bg-gradient-to-br from-purple-500/30 to-blue-600/30 backdrop-blur-sm rounded-2xl flex items-center justify-center text-2xl text-white mb-5 shadow-lg border border-white/20">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center text-2xl text-white mb-4 sm:mb-5 border border-white/10">
                   {concept.icon}
                 </div>
 
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white/80 border border-white/20">
+                <div className="mb-3 sm:mb-4">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80 border border-white/10">
                     {concept.category}
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                   {concept.title}
                 </h3>
 
-                <p className="text-white/80 leading-relaxed mb-6">
+                <p className="text-white/80 leading-relaxed text-sm sm:text-base mb-5 sm:mb-6">
                   {concept.description}
                 </p>
 
-                <div className="flex gap-3 flex-wrap">
+                <div className="flex gap-2 sm:gap-3 flex-wrap">
                   {concept.links.map((link, linkIndex) => (
                     <button
                       key={linkIndex}
-                      className="bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20 hover:shadow-lg relative overflow-hidden group"
+                      className="bg-white/10 backdrop-blur-sm border border-white/10 text-white/90 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 hover:bg-white/15 relative overflow-hidden group"
                     >
                       <span className="relative z-10">{link}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
@@ -216,7 +218,7 @@ export default function InfosPage() {
                   ))}
                 </div>
 
-                <div className="mt-6 text-white/60 text-sm font-medium">
+                <div className="mt-5 sm:mt-6 text-white/60 text-xs sm:text-sm font-medium">
                   Clique para saber mais →
                 </div>
               </div>

@@ -39,108 +39,150 @@ export default function RayTracingPage() {
           <div className="space-y-16">
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
                 História
               </h2>
-              <div className="text-white/80 space-y-4 leading-relaxed">
-                <p>
-                  O ray tracing foi desenvolvido na década de 1960, com Arthur
-                  Appel publicando o primeiro artigo sobre o assunto em 1968.
-                  Ele descreveu um algoritmo para renderizar imagens 3D usando
-                  "ray casting".
-                </p>
-                <p>
-                  Turner Whitted expandiu o conceito em 1979 com seu artigo "An
-                  Improved Illumination Model for Shaded Display", introduzindo
-                  reflexões e sombras, criando o que hoje chamamos de ray
-                  tracing recursivo.
-                </p>
-                <p>
-                  O ray tracing em tempo real só se tornou viável na década de
-                  2010, com o lançamento das GPUs NVIDIA RTX em 2018, que
-                  incluíam hardware dedicado para aceleração de ray tracing.
-                </p>
+              <div className="mb-6">
+                <div className="lg:col-span-2 text-white/80 space-y-4 leading-relaxed">
+                  <p>
+                    O ray tracing remonta a{" "}
+                    <strong className="text-white">Arthur Appel (1968)</strong>,
+                    que introduziu o ray casting para sombreamento e
+                    visibilidade.
+                  </p>
+                  <p>
+                    Em 1979,{" "}
+                    <strong className="text-white">Turner Whitted</strong>{" "}
+                    formalizou o ray tracing recursivo com reflexões e
+                    refrações, base do render moderno.
+                  </p>
+                  <p>
+                    A partir de 2018, GPUs com núcleos dedicados (RTX)
+                    viabilizaram
+                    <strong className="text-white">
+                      {" "}
+                      ray tracing em tempo real
+                    </strong>{" "}
+                    em jogos.
+                  </p>
+                </div>
+              </div>
+
+              {/* Timeline */}
+              <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                <h3 className="text-lg font-semibold text-white mb-4">
+                  Marcos
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-white font-medium">1968:</span>
+                    <span className="text-white/80">
+                      Appel publica ray casting
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-white font-medium">1979:</span>
+                    <span className="text-white/80">
+                      Whitted e o ray tracing recursivo
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-white font-medium">2018:</span>
+                    <span className="text-white/80">GPUs RTX com RT cores</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span className="text-white font-medium">Hoje:</span>
+                    <span className="text-white/80">
+                      RT híbrido em tempo real
+                    </span>
+                  </div>
+                </div>
               </div>
             </section>
 
-            {/* Teoria */}
+            {/* Princípios Fundamentais */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
-                Como Funciona
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
+                Princípios Fundamentais
               </h2>
               <div className="text-white/80 space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    O Algoritmo Básico
-                  </h3>
-                  <p className="leading-relaxed mb-4">
-                    O ray tracing simula como a luz viaja do olho (câmera) para
-                    os objetos:
-                  </p>
-                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                    1. Para cada pixel na tela
-                    <br />
-                    2. Lançar um raio da câmera
-                    <br />
-                    3. Encontrar o objeto mais próximo
-                    <br />
-                    4. Calcular a cor baseada na iluminação
-                    <br />
-                    5. Se houver reflexão/refração, continuar o raio
+                <div className="flex text-center gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      O Algoritmo Básico
+                    </h3>
+                    <p className="leading-relaxed mb-4">
+                      Simula caminhos de luz da câmera até as superfícies.
+                    </p>
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    Tipos de Raios
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Primary Rays
-                      </h4>
-                      <p className="text-sm">
-                        Raios que saem da câmera para cada pixel.
-                      </p>
-                    </div>
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Shadow Rays
-                      </h4>
-                      <p className="text-sm">
-                        Raios que verificam se um ponto está na sombra.
-                      </p>
-                    </div>
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Reflection Rays
-                      </h4>
-                      <p className="text-sm">
-                        Raios que simulam reflexões em superfícies.
-                      </p>
-                    </div>
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Refraction Rays
-                      </h4>
-                      <p className="text-sm">
-                        Raios que simulam refração através de materiais.
-                      </p>
-                    </div>
+                <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
+                  1. Para cada pixel → emitir raio primário
+                  <br />
+                  2. Encontrar a primeira interseção
+                  <br />
+                  3. Calcular cor com luzes e material
+                  <br />
+                  4. Gerar raios de sombra/ reflexão/ refração conforme material
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      Raios Primários e de Sombra
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Verificam visibilidade de pontos e iluminação direta.
+                    </p>
+                  </div>
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      Reflexão e Refração
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Raios secundários para materiais espelhados e
+                      transparentes.
+                    </p>
                   </div>
                 </div>
 
-                <div>
+                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-3">
                     Modelos de Iluminação
                   </h3>
-                  <p className="leading-relaxed">
-                    O ray tracing usa modelos físicos como Phong, Blinn-Phong e
-                    modelos fisicamente baseados (PBR) para calcular a
-                    iluminação de cada ponto na superfície dos objetos.
+                  <p className="leading-relaxed mb-4">
+                    Phong, Blinn-Phong e PBR para luz direta e indireta.
                   </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Aceleração</h4>
+                    <p className="text-sm text-white/60">
+                      BVH/KD-Tree para reduzir testes de interseção.
+                    </p>
+                  </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">Amostragem</h4>
+                    <p className="text-sm text-white/60">
+                      Anti-aliasing via multi-sampling.
+                    </p>
+                  </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">
+                      Path Tracing
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Integra iluminação global estocástica.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -148,7 +190,6 @@ export default function RayTracingPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -197,12 +238,10 @@ export default function RayTracingPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 Aplicações Atuais
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-              
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Jogos
@@ -215,7 +254,6 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Cinema
@@ -228,7 +266,6 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Arquitetura
@@ -241,7 +278,6 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Automotivo
@@ -254,7 +290,6 @@ export default function RayTracingPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Ciência
@@ -264,6 +299,77 @@ export default function RayTracingPage() {
                       eletromagnéticos.
                     </p>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Recursos e Referências */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                Referências
+              </h2>
+              <div className="space-y-3">
+                <a
+                  href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                >
+                  <h4 className="text-white font-medium mb-1">
+                    Wikipedia - Ray Tracing
+                  </h4>
+                  <p className="text-white/60 text-sm">
+                    História, teoria e variações do algoritmo
+                  </p>
+                </a>
+
+                <a
+                  href="https://www.pbrt.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                >
+                  <h4 className="text-white font-medium mb-1">
+                    PBRT - Physically Based Rendering
+                  </h4>
+                  <p className="text-white/60 text-sm">
+                    Livro clássico sobre renderização fisicamente baseada
+                  </p>
+                </a>
+
+                <a
+                  href="https://raytracing.github.io/books/RayTracingInOneWeekend.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                >
+                  <h4 className="text-white font-medium mb-1">
+                    Ray Tracing in One Weekend
+                  </h4>
+                  <p className="text-white/60 text-sm">
+                    Série gratuita para implementar seu próprio ray tracer
+                  </p>
+                </a>
+              </div>
+            </section>
+
+            {/* Demo Link */}
+            <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center justify-center gap-3">
+                Experimente na Prática
+              </h2>
+              <div className="text-center">
+                <p className="text-white/80 mb-6">
+                  Veja um exemplo interativo de iluminação e reflexão em tempo
+                  real.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => router.push("/canvas")}
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:opacity-60 cursor-pointer"
+                  >
+                    Ferramenta Interativa
+                  </button>
                 </div>
               </div>
             </section>

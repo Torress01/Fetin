@@ -40,7 +40,6 @@ export default function VideoCompressionPage() {
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 História
               </h2>
               <div className="text-white/80 space-y-4 leading-relaxed">
@@ -66,7 +65,6 @@ export default function VideoCompressionPage() {
             {/* Teoria */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 Como Funciona
               </h2>
               <div className="text-white/80 space-y-6">
@@ -151,7 +149,6 @@ export default function VideoCompressionPage() {
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -202,12 +199,10 @@ export default function VideoCompressionPage() {
             {/* Aplicações */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 Codecs Modernos
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       H.264/AVC
@@ -220,7 +215,6 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       H.265/HEVC
@@ -230,7 +224,6 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       AV1
@@ -243,7 +236,6 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       H.266/VVC
@@ -260,12 +252,10 @@ export default function VideoCompressionPage() {
             {/* Impacto */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 Impacto Global
               </h2>
               <div className="text-white/80 space-y-4">
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Armazenamento
@@ -278,7 +268,6 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Streaming
@@ -291,7 +280,6 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Mobile
@@ -304,7 +292,6 @@ export default function VideoCompressionPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       Educação
@@ -320,7 +307,6 @@ export default function VideoCompressionPage() {
             {/* Demo Link */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-
                 Experimente na Prática
               </h2>
               <div className="text-center">

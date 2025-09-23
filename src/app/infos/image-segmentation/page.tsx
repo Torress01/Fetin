@@ -40,99 +40,200 @@ export default function ImageSegmentationPage() {
           <div className="space-y-16">
             {/* História */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
                 História
               </h2>
-              <div className="text-white/80 space-y-4 leading-relaxed">
-                <p>
-                  A segmentação de imagens tem suas origens na década de 1960,
-                  quando pesquisadores começaram a desenvolver algoritmos para
-                  análise automática de imagens médicas e satelitais.
-                </p>
-                <p>
-                  O algoritmo de flood fill foi desenvolvido por volta de 1979,
-                  sendo uma das técnicas mais fundamentais de segmentação. Ele
-                  permite preencher regiões conectadas de pixels com a mesma
-                  cor.
-                </p>
-                <p>
-                  Na década de 1990, algoritmos mais sofisticados como watershed
-                  e region growing foram desenvolvidos, permitindo segmentação
-                  mais precisa e robusta para aplicações médicas e industriais.
-                </p>
+              <div className="mb-6">
+                <div className="lg:col-span-2 text-white/80 space-y-4 leading-relaxed">
+                  <p>
+                    As primeiras técnicas de segmentação surgiram nos anos 1960
+                    para analisar imagens médicas e satelitais. Métodos simples
+                    como limiarização e crescimento de regiões apareceram cedo.
+                  </p>
+                  <p>
+                    O <strong className="text-white">flood fill</strong> (c.
+                    1979) popularizou seleção de regiões conectadas. Na década
+                    de 1990,
+                    <strong className="text-white"> watershed</strong> tornou-se
+                    pilar em visão computacional.
+                  </p>
+                  <p>
+                    Hoje, técnicas clássicas convivem com abordagens modernas
+                    baseadas em aprendizado profundo para segmentação semântica.
+                  </p>
+                </div>
+              </div>
+
+              {/* Timeline */}
+              <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                <h3 className="text-lg font-semibold text-white mb-4">
+                  Marcos
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-white font-medium">1960s:</span>
+                    <span className="text-white/80">
+                      Primeiros métodos clássicos
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-white font-medium">1979:</span>
+                    <span className="text-white/80">
+                      Flood fill popularizado
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-white font-medium">1990s:</span>
+                    <span className="text-white/80">
+                      Watershed e region growing
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    <span className="text-white font-medium">Hoje:</span>
+                    <span className="text-white/80">
+                      Segmentação com deep learning
+                    </span>
+                  </div>
+                </div>
               </div>
             </section>
 
-            {/* Teoria */}
+            {/* Princípios Fundamentais */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Algoritmos Principais
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
+                Princípios Fundamentais
               </h2>
               <div className="text-white/80 space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    Flood Fill (Preenchimento por Inundação)
-                  </h3>
-                  <p className="leading-relaxed mb-4">
-                    Algoritmo recursivo que preenche uma região conectada:
-                  </p>
-                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                    function floodFill(x, y, targetColor, replacementColor):
-                    <br />
-                    &nbsp;&nbsp;if pixel(x,y) != targetColor: return
-                    <br />
-                    &nbsp;&nbsp;setPixel(x,y, replacementColor)
-                    <br />
-                    &nbsp;&nbsp;floodFill(x+1, y, targetColor, replacementColor)
-                    <br />
-                    &nbsp;&nbsp;floodFill(x-1, y, targetColor, replacementColor)
-                    <br />
-                    &nbsp;&nbsp;floodFill(x, y+1, targetColor, replacementColor)
-                    <br />
-                    &nbsp;&nbsp;floodFill(x, y-1, targetColor, replacementColor)
+                <div className="flex text-center gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      Algoritmos-Chave
+                    </h3>
+                    <p className="leading-relaxed mb-4">
+                      Segmentação divide a imagem em regiões coerentes. Métodos
+                      variam entre limiarização, conectividade e gradiente.
+                    </p>
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    Segmentação por Cor
-                  </h3>
-                  <p className="leading-relaxed mb-4">
-                    Baseada na similaridade de cores entre pixels:
-                  </p>
-                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                    distance = √[(R₁-R₂)² + (G₁-G₂)² + (B₁-B₂)²]
-                    <br />
-                    if distance ≤ tolerance:
-                    <br />
-                    &nbsp;&nbsp;segmentar pixel
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      Flood Fill
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Preenche regiões conectadas por cor.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      Region Growing
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Expande regiões por similaridade local.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      Watershed
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Usa topografia do gradiente da imagem.
+                    </p>
+                  </div>
+
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                      Limiarização
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Separa foreground/background por um limiar.
+                    </p>
                   </div>
                 </div>
 
-                <div>
+                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    Watershed (Bacia Hidrográfica)
+                    Critério de Similaridade
                   </h3>
                   <p className="leading-relaxed mb-4">
-                    Algoritmo que trata a imagem como um mapa topográfico:
+                    Pixels são agrupados pela distância de cor:
                   </p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Marcadores
-                      </h4>
-                      <p className="text-sm">
-                        Pontos de partida para cada região
+                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
+                    d = √[(R₁-R₂)² + (G₁-G₂)² + (B₁-B₂)²]
+                    <br />
+                    <span className="text-white/60">
+                      // se d ≤ tolerância → mesmo segmento
+                    </span>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">
+                      Conectividade
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      4-vizinhos vs 8-vizinhos
+                    </p>
+                  </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">
+                      Pré-processamento
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Suavização e realce de bordas
+                    </p>
+                  </div>
+                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">
+                      Pós-processamento
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Limpeza de ruído e junção de regiões
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Vídeo Educativos */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Vídeo Educativos
+              </h2>
+              <div className="flex justify-center">
+                <div className="bg-black/20 rounded-lg overflow-hidden border border-white/10">
+                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-4xl mb-2">▶</div>
+                      <p className="text-white text-sm">
+                        Image Segmentation Basics
                       </p>
+                      <a
+                        href="https://www.youtube.com/watch?v=Q8o-7Q9yGgE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 text-xs underline"
+                      >
+                        Assistir no YouTube
+                      </a>
                     </div>
-                    <div className="bg-black/20 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-2">
-                        Inundação
-                      </h4>
-                      <p className="text-sm">
-                        Simulação de água subindo dos marcadores
-                      </p>
-                    </div>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-white/80 text-sm">
+                      Introdução visual a técnicas clássicas de segmentação
+                    </p>
                   </div>
                 </div>
               </div>
@@ -140,7 +241,7 @@ export default function ImageSegmentationPage() {
 
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
                 Curiosidades
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -148,9 +249,9 @@ export default function ImageSegmentationPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Photoshop
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    A ferramenta "Magic Wand" do Photoshop usa uma variação do
-                    flood fill com tolerância de cor para seleção automática.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    A ferramenta Magic Wand usa variações de flood fill com
+                    tolerância.
                   </p>
                 </div>
 
@@ -158,19 +259,19 @@ export default function ImageSegmentationPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Medicina
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Segmentação é crucial em tomografia computadorizada para
-                    identificar órgãos e detectar anomalias automaticamente.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    Essencial em TC e RM para delinear órgãos e lesões
+                    automaticamente.
                   </p>
                 </div>
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-lg font-semibold text-white mb-3">
-                    Visão Computacional
+                    Autônomos
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Carros autônomos usam segmentação para identificar
-                    pedestres, outros veículos e obstáculos em tempo real.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    Segmentação semântica identifica pista, pedestres e
+                    veículos.
                   </p>
                 </div>
 
@@ -178,98 +279,164 @@ export default function ImageSegmentationPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Satélites
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    Imagens de satélite são segmentadas para mapear uso do solo,
-                    monitorar desmatamento e analisar mudanças climáticas.
+                  <p className="text-white/80 text-sm leading-relaxed mb-3">
+                    Mapeamento de uso do solo e monitoramento ambiental em larga
+                    escala.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Aplicações */}
+            {/* Aplicações Modernas */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Aplicações Práticas
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Aplicações Modernas
               </h2>
-              <div className="text-white/80 space-y-4">
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Diagnóstico Médico
-                    </h3>
-                    <p>
-                      Identificação automática de tumores, análise de raios-X e
-                      segmentação de órgãos em exames de imagem.
-                    </p>
+              <div className="grid lg:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Saúde
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Delimitação de tumores e estruturas anatômicas.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Indústria
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Inspeção visual e controle de qualidade.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Mapeamento
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Análise de imagens aéreas e de satélite.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className=" flex items-center justify-center"></div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        Entretenimento
+                      </h3>
+                      <p className="text-white/80 text-sm">
+                        Efeitos visuais e recorte automático de fundo.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Veículos Autônomos
-                    </h3>
-                    <p>
-                      Detecção de objetos, identificação de faixas de trânsito e
-                      reconhecimento de sinais de trânsito.
-                    </p>
+                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                  <h3 className="text-lg font-semibold text-white mb-4">
+                    Ferramentas / Libs
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">OpenCV</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">scikit-image</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">
+                        TensorFlow / PyTorch
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-white/80">MONAI</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-white/10">
+                    <h4 className="text-white font-medium mb-3">Categorias</h4>
+                    <div className="grid grid-cols-1 gap-2 text-sm">
+                      <div className="text-white/60">• Semântica</div>
+                      <div className="text-white/60">• Instância</div>
+                      <div className="text-white/60">• Panóptica</div>
+                      <div className="text-white/60">• Interativa</div>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </section>
 
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Controle de Qualidade
-                    </h3>
-                    <p>
-                      Inspeção automática de produtos, detecção de defeitos e
-                      classificação de itens em linhas de produção.
-                    </p>
-                  </div>
-                </div>
+            {/* Recursos e Referências */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Referências
+              </h2>
+              <div className="">
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-4">
+                    Livros e Artigos
+                  </h3>
+                  <div className="space-y-3">
+                    <a
+                      href="https://en.wikipedia.org/wiki/Image_segmentation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                    >
+                      <h4 className="text-white font-medium mb-1">
+                        Wikipedia - Image Segmentation
+                      </h4>
+                      <p className="text-white/60 text-sm">
+                        Visão geral de técnicas e aplicações
+                      </p>
+                    </a>
 
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Jogos e Entretenimento
-                    </h3>
-                    <p>
-                      Remoção de fundos em fotos, efeitos especiais e
-                      reconhecimento de gestos para realidade virtual.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Pesquisa Científica
-                    </h3>
-                    <p>
-                      Análise de células em microscopia, contagem de partículas
-                      e estudo de padrões em imagens científicas.
-                    </p>
+                    <a
+                      href="https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_marked_watershed.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                    >
+                      <h4 className="text-white font-medium mb-1">
+                        scikit-image - Watershed
+                      </h4>
+                      <p className="text-white/60 text-sm">
+                        Exemplo prático do algoritmo watershed
+                      </p>
+                    </a>
                   </div>
                 </div>
               </div>
             </section>
 
             {/* Demo Link */}
-            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+            <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Experimente na Prática
               </h2>
               <div className="text-center">
                 <p className="text-white/80 mb-6">
-                  Teste nossa ferramenta interativa de segmentação com flood
-                  fill e seleção inteligente por cor.
+                  Teste nossa ferramenta interativa de segmentação.
                 </p>
-                <button
-                  onClick={() => router.push("/segmentation")}
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/40"
-                >
-                  Acessar Ferramenta de Segmentação
-                </button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => router.push("/segmentation")}
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:opacity-60 cursor-pointer"
+                  >
+                    Ferramenta Interativa
+                  </button>
+                </div>
               </div>
             </section>
           </div>
