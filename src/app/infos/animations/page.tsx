@@ -18,7 +18,7 @@ export default function AnimationsPage() {
               onClick={() => router.back()}
               className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
             >
-              ← Voltar
+              ← Voltar para material teórico
             </button>
           </div>
 
@@ -419,23 +419,18 @@ export default function AnimationsPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="text-white/80">Adobe After Effects</span>
-
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white/80">Blender</span>
-
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white/80">CSS Animations</span>
-
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white/80">Lottie</span>
-
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white/80">Unity/Unreal</span>
-
                     </div>
                   </div>
 
@@ -512,8 +507,6 @@ export default function AnimationsPage() {
                     </a>
                   </div>
                 </div>
-
-                
               </div>
             </section>
 

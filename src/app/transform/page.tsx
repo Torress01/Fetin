@@ -1,13 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function CanvasPage() {
+export default function TransformPage() {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Simular carregamento
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleIframeLoad = () => {
     setIsLoading(false);
+    setError(null);
+  };
+
+  const handleIframeError = () => {
+    setIsLoading(false);
+    setError(
+      "Erro ao carregar o aplicativo. Verifique se os arquivos estão corretos."
+    );
   };
 
   return (
@@ -17,20 +35,38 @@ export default function CanvasPage() {
         <div className="absolute inset-0 z-40 flex items-center justify-center bg-black">
           <div className="text-center">
             <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-white/80 text-sm">
-              Carregando Canvas Interativo...
-            </p>
+            <p className="text-white/80 text-sm">Carregando aplicativo...</p>
           </div>
         </div>
       )}
 
-      {/* Iframe */}
+      {/* Error State */}
+      {error && (
+        <div className="absolute inset-0 z-40 flex items-center justify-center bg-black">
+          <div className="text-center max-w-md mx-auto p-6">
+            <div className="text-red-400 text-4xl mb-4">⚠️</div>
+            <h2 className="text-white text-xl font-semibold mb-2">
+              Erro de Carregamento
+            </h2>
+            <p className="text-white/80 text-sm mb-4">{error}</p>
+            <Link
+              href="/"
+              className="inline-block bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all duration-300"
+            >
+              Voltar ao Menu
+            </Link>
+          </div>
+        </div>
+      )}
+
+      {/* Iframe Container */}
       <div className="w-full h-full">
         <iframe
           src="/static-project/pages/transform.html"
           className="w-full h-full border-0"
-          title="Transformações 2D - Canvas Feliz"
           onLoad={handleIframeLoad}
+          onError={handleIframeError}
+          title="Transformações 2D - Canvas Feliz"
           sandbox="allow-scripts allow-same-origin allow-forms"
         />
       </div>
@@ -46,10 +82,10 @@ export default function CanvasPage() {
         </Link>
 
         <Link
-          href="/infos"
+          href="/infos/geometric-transformations"
           className="text-white/90 hover:text-white px-4 py-2 rounded-xl bg-black/80 hover:bg-black/90 backdrop-blur-md border border-white/10 transition-all duration-300 text-sm sm:text-base font-medium"
         >
-          Material Teórico
+          📚 Teoria
         </Link>
       </div>
     </div>

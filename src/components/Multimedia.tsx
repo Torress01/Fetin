@@ -21,8 +21,8 @@ const tools: ToolCard[] = [
     features: ["FFT", "Filtros"],
   },
   {
-    title: "Anti-Aliasing",
-    description: "Entenda e experimente técnicas de suavização de bordas",
+    title: "Aliasing",
+    description: "Entenda e experimente frequência de amostragem",
     icon: "✨",
     href: "/aliasing",
     color: "green",

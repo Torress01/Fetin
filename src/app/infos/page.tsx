@@ -86,6 +86,15 @@ const concepts: Concept[] = [
     category: "Multimídia",
     links: ["Comparação", "Zoom Interativo", "Aplicações"],
   },
+  {
+    id: "audio",
+    icon: "🎵",
+    title: "Processamento Digital de Áudio",
+    description:
+      "Fundamentos do áudio digital: digitalização, codecs, formatos de arquivo e aplicações modernas em streaming, jogos e comunicação.",
+    category: "Multimídia",
+    links: ["Digitalização", "Codecs", "Aplicações"],
+  },
 ];
 
 const categories = ["Todos", "Computação Gráfica", "Multimídia"];

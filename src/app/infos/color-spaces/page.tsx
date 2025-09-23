@@ -19,7 +19,7 @@ export default function ColorSpacesPage() {
               onClick={() => router.back()}
               className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
             >
-              ← Voltar
+              ← Voltar para material teórico
             </button>
           </div>
 

@@ -18,7 +18,7 @@ export default function BezierCurvesPage() {
               onClick={() => router.back()}
               className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
             >
-              ← Voltar
+              ← Voltar para material teórico
             </button>
           </div>
 
@@ -189,7 +189,7 @@ export default function BezierCurvesPage() {
                 <div className="bg-black/20 rounded-lg overflow-hidden border border-white/10">
                   <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="text-4xl mb-2">▶️</div>
+                      <div className="text-4xl mb-2">▶</div>
                       <p className="text-white text-sm">
                         The Beauty of Bézier Curves
                       </p>

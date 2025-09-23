@@ -18,8 +18,8 @@
         top: 20px;
         left: 20px;
         z-index: 1000;
-        background: rgba(255, 255, 255, 0.9);
-        color: #333;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
         padding: 10px 16px;
         border-radius: 20px;
         text-decoration: none;
@@ -28,13 +28,22 @@
         font-weight: 600;
         transition: all 0.3s ease;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        opacity: 0.8;
       }
 
       .back-to-main:hover {
-        background: rgba(255, 255, 255, 1);
+        background: rgba(0, 0, 0, 0.9);
         transform: translateX(-3px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+      }
+
+      /* Hide back button when in iframe */
+      @media (max-width: 768px) {
+        .back-to-main {
+          display: none;
+        }
       }
     </style>
 
@@ -74,5 +83,24 @@
 
     <script src="../dist/config/Keybinds.js"></script>
   </head>
-  <body></body>
+  <body>
+    <!-- Back button - only show when not in iframe -->
+    <a href="/" class="back-to-main" id="backButton">← Menu Principal</a>
+
+    <script>
+      // Detect if running inside an iframe
+      function isInIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+
+      // Hide back button if in iframe
+      if (isInIframe()) {
+        document.getElementById("backButton").style.display = "none";
+      }
+    </script>
+  </body>
 </html>
