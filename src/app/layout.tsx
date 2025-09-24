@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Uma plataforma moderna para aprender e experimentar conceitos de computação gráfica e multimídia através de ferramentas visuais e interativas.",
   icons: {
-    icon: "./images/favicon.svg",
+    icon: "./images/anvil.svg",
   },
 };
 

@@ -59,7 +59,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center text-lg lg:text-xl shadow-lg shadow-purple-500/40 group-hover:scale-110 transition-transform duration-300">
                 <img
-                  src="/images/pixelfed.svg"
+                  src="/images/anvil.svg"
                   alt="logo"
                   className="w-6 h-6 lg:w-8 lg:h-8"
                 />
