@@ -24,6 +24,12 @@ declare function textAlign(horizontal: any, vertical?: any): void;
 declare function dist(x1: number, y1: number, x2: number, y2: number): number;
 declare function redraw(): void;
 
+// p5 math helpers
+declare function degrees(radians: number): number;
+declare function radians(degrees: number): number;
+declare function sin(angle: number): number;
+declare function cos(angle: number): number;
+
 // p5 constants
 declare const ROUND: any;
 declare const CLOSE: any;
