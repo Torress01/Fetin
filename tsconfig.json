@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["p5", "./global"],
     "plugins": [
       {
         "name": "next"
