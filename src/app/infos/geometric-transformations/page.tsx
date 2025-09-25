@@ -60,7 +60,7 @@ export default function GeometricTransformationsPage() {
                   </p>
                   <p>
                     <strong className="text-white">Ivan Sutherland</strong>,
-                    considerado o "pai da computação gráfica", desenvolveu o
+                    considerado o pai da computação gráfica, desenvolveu o
                     Sketchpad em 1963, que foi o primeiro sistema a usar
                     transformações geométricas de forma interativa.
                   </p>
@@ -212,7 +212,7 @@ export default function GeometricTransformationsPage() {
                     T_final = T₃ × T₂ × T₁
                     <br />
                     <span className="text-white/60">
-                      // Aplicada da direita para esquerda: T₁, depois T₂,
+                      Aplicada da direita para esquerda: T₁, depois T₂,
                       depois T₃
                     </span>
                   </div>

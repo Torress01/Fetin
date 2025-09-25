@@ -124,12 +124,12 @@ export class FFTProcessor {
     width: number,
     height: number
   ): FFTResult {
-    let realData: Complex[] = [];
+    const realData: Complex[] = [];
     for (let i = 0; i < data.length; i++) {
       realData.push({ real: data[i], imag: 0 });
     }
 
-    let rowFFT: Complex[][] = [];
+    const rowFFT: Complex[][] = [];
     for (let y = 0; y < height; y++) {
       let row: Complex[] = [];
       for (let x = 0; x < width; x++) {
@@ -141,7 +141,7 @@ export class FFTProcessor {
       rowFFT.push(FFTProcessor.fft1d(row));
     }
 
-    let result: Complex[][] = Array(height)
+    const result: Complex[][] = Array(height)
       .fill(null)
       .map(() => Array(width).fill(null));
 
@@ -153,15 +153,15 @@ export class FFTProcessor {
 
       col = FFTProcessor.padToPowerOf2(col);
 
-      let colFFT = FFTProcessor.fft1d(col);
+      const colFFT = FFTProcessor.fft1d(col);
 
       for (let y = 0; y < height; y++) {
         result[y][x] = colFFT[y];
       }
     }
 
-    let magnitude: number[] = [];
-    let phase: number[] = [];
+    const magnitude: number[] = [];
+    const phase: number[] = [];
 
     const totalPixels = width * height;
 
@@ -170,11 +170,11 @@ export class FFTProcessor {
       const x = i % width;
 
       if (result[y] && result[y][x]) {
-        let real = result[y][x].real;
-        let imag = result[y][x].imag;
+        const real = result[y][x].real;
+        const imag = result[y][x].imag;
 
-        let mag = Math.sqrt(real * real + imag * imag);
-        let ph = Math.atan2(imag, real);
+        const mag = Math.sqrt(real * real + imag * imag);
+        const ph = Math.atan2(imag, real);
 
         magnitude.push(mag);
         phase.push(ph);
@@ -192,7 +192,7 @@ export class FFTProcessor {
     width: number,
     height: number
   ): number[] {
-    let matrix: Complex[][] = [];
+    const matrix: Complex[][] = [];
     for (let y = 0; y < height; y++) {
       matrix[y] = [];
       for (let x = 0; x < width; x++) {
@@ -200,29 +200,29 @@ export class FFTProcessor {
       }
     }
 
-    let rowIFFT: Complex[][] = [];
+    const rowIFFT: Complex[][] = [];
     for (let y = 0; y < height; y++) {
       rowIFFT.push(FFTProcessor.ifft1d(matrix[y]));
     }
 
-    let colIFFT: number[][] = Array(height)
+    const colIFFT: number[][] = Array(height)
       .fill(null)
       .map(() => Array(width).fill(0));
 
     for (let x = 0; x < width; x++) {
-      let col: Complex[] = [];
+      const col: Complex[] = [];
       for (let y = 0; y < height; y++) {
         col.push(rowIFFT[y][x]);
       }
 
-      let colResult = FFTProcessor.ifft1d(col);
+      const colResult = FFTProcessor.ifft1d(col);
 
       for (let y = 0; y < height; y++) {
         colIFFT[y][x] = colResult[y].real;
       }
     }
 
-    let flatResult: number[] = [];
+    const flatResult: number[] = [];
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
         flatResult.push(colIFFT[y][x]);

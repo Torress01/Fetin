@@ -51,19 +51,20 @@ export default function AnimationsPage() {
                       {" "}
                       fenacistoscópio de Joseph Plateau
                     </strong>{" "}
-                    em 1832. O primeiro filme de animação foi "Fantasmagorie" de
-                    Émile Cohl em 1908.
+                    em 1832. O primeiro filme de animação foi
+                    &quot;Fantasmagorie&quot; de Émile Cohl em 1908.
                   </p>
                   <p>
                     A animação por computador começou na década de 1960, com
                     pioneiros como
                     <strong className="text-white">Ivan Sutherland</strong> e
                     seu sistema Sketchpad. O primeiro filme de animação
-                    computadorizada foi "Hummingbird" de Charles Csuri em 1967.
+                    computadorizada foi &quot;Hummingbird&quot; de Charles Csuri
+                    em 1967.
                   </p>
                   <p>
                     A <strong className="text-white">Pixar</strong> revolucionou
-                    a animação com "Toy Story" em 1995, o primeiro
+                    a animação com &quot;Toy Story&quot; em 1995, o primeiro
                     longa-metragem totalmente animado por computador. Desde
                     então, a animação digital se tornou o padrão da indústria.
                   </p>
@@ -87,28 +88,28 @@ export default function AnimationsPage() {
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     <span className="text-white font-medium">1908:</span>
                     <span className="text-white/80">
-                      "Fantasmagorie" - primeiro filme de animação
+                      &quot;Fantasmagorie&quot; - primeiro filme de animação
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     <span className="text-white font-medium">1937:</span>
                     <span className="text-white/80">
-                      "Branca de Neve" - primeiro longa de animação
+                      &quot;Branca de Neve&quot; - primeiro longa de animação
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
                     <span className="text-white font-medium">1967:</span>
                     <span className="text-white/80">
-                      "Hummingbird" - primeira animação por computador
+                      &quot;Hummingbird&quot; - primeira animação por computador
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                     <span className="text-white font-medium">1995:</span>
                     <span className="text-white/80">
-                      "Toy Story" revoluciona a animação digital
+                      &quot;Toy Story&quot; revoluciona a animação digital
                     </span>
                   </div>
                 </div>
@@ -189,7 +190,7 @@ export default function AnimationsPage() {
                     × progresso
                     <br />
                     <span className="text-white/60">
-                      // onde progresso varia de 0 a 1
+                      onde progresso varia de 0 a 1
                     </span>
                   </div>
                 </div>
@@ -263,9 +264,9 @@ export default function AnimationsPage() {
                     Toy Story
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-3">
-                    O primeiro "Toy Story" levou 4 anos para ser produzido e
-                    usou 117 computadores renderizando 24 horas por dia. Cada
-                    frame levava entre 45 minutos e 30 horas para ser
+                    O primeiro &quot;Toy Story&quot; levou 4 anos para ser
+                    produzido e usou 117 computadores renderizando 24 horas por
+                    dia. Cada frame levava entre 45 minutos e 30 horas para ser
                     renderizado.
                   </p>
                   <a
@@ -471,7 +472,7 @@ export default function AnimationsPage() {
                       className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
                     >
                       <h4 className="text-white font-medium mb-1">
-                        The Animator's Survival Kit
+                        The Animator&apos;s Survival Kit
                       </h4>
                       <p className="text-white/60 text-sm">
                         Livro clássico de Richard Williams sobre animação

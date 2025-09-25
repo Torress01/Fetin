@@ -162,7 +162,7 @@ export default function ColorSpacesPage() {
                   <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
                     Cor = R × (255,0,0) + G × (0,255,0) + B × (0,0,255)
                     <br />
-                    <span className="text-white/60">// R,G,B ∈ [0,255]</span>
+                    <span className="text-white/60">R,G,B ∈ [0,255]</span>
                   </div>
                 </div>
 
@@ -405,7 +405,7 @@ export default function ColorSpacesPage() {
                     >
                       <h4 className="text-white font-medium mb-1">CIE</h4>
                       <p className="text-white/60 text-sm">
-                        Commission Internationale de l'Éclairage
+                        Commission Internationale de l&apos;Éclairage
                       </p>
                     </a>
                   </div>

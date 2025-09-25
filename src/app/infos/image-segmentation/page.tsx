@@ -173,7 +173,7 @@ export default function ImageSegmentationPage() {
                     d = √[(R₁-R₂)² + (G₁-G₂)² + (B₁-B₂)²]
                     <br />
                     <span className="text-white/60">
-                      // se d ≤ tolerância → mesmo segmento
+                      se d ≤ tolerância → mesmo segmento
                     </span>
                   </div>
                 </div>

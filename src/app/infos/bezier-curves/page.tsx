@@ -248,9 +248,9 @@ export default function BezierCurvesPage() {
                     Adobe Illustrator
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-3">
-                    A ferramenta "Pen Tool" do Adobe Illustrator é baseada
-                    inteiramente em curvas de Bézier, permitindo criar qualquer
-                    forma imaginável.
+                    A ferramenta &quot;Pen Tool&quot; do Adobe Illustrator é
+                    baseada inteiramente em curvas de Bézier, permitindo criar
+                    qualquer forma imaginável.
                   </p>
                 </div>
 

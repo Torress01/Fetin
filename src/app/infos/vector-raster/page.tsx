@@ -170,9 +170,7 @@ export default function VectorRasterPage() {
                   <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
                     I(x,y) = cor[pixel(x,y)]
                     <br />
-                    <span className="text-white/60">
-                      // x,y inteiros na grade
-                    </span>
+                    <span className="text-white/60">x,y inteiros na grade</span>
                   </div>
                 </div>
 
