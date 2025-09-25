@@ -63,7 +63,8 @@ export default function SectionsComponent() {
 
         {/* Tools Grid */}
 
-        <div className="flex justify-center gap-8 mb-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        {/* Tools Grid */}
+        <div className="grid grid-cols-1 place-items-center mb-16">
           {tools.map((tool, index) => (
             <Link
               key={index}

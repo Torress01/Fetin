@@ -40,9 +40,9 @@ export default function CompressPage() {
 
   const loadLennaImage = async () => {
     try {
-      const response = await fetch("/images/Lenna_colored.png");
+      const response = await fetch("/images/mandrill.png");
       const blob = await response.blob();
-      const file = new File([blob], "Lenna_colored.png", { type: "image/png" });
+      const file = new File([blob], "mandrill.png", { type: "image/png" });
 
       setOriginalImageData(file);
       loadOriginalImage(file);
@@ -202,8 +202,11 @@ export default function CompressPage() {
     setCompressedImageUrl(dataUrl);
 
     // Calculate compressed size (approximation from data URL)
-    const compressedSize = Math.round(((dataUrl.length - 22) * 3) / 4);
-    const originalSize = originalImageData?.size || 0;
+    const compressedSize = Math.max(
+      1,
+      Math.round(((dataUrl.length - 22) * 3) / 4)
+    ); // nunca zero
+    const originalSize = originalImageData?.size || 1; // nunca zero
 
     const compressedInfo: ImageInfo = {
       dimensions: originalImageInfo?.dimensions || "",
@@ -213,11 +216,13 @@ export default function CompressPage() {
     setCompressedInfo(compressedInfo);
 
     // Calculate and display comparison stats
-    const sizeReduction = originalSize - compressedSize;
-    const reductionPercentage = ((sizeReduction / originalSize) * 100).toFixed(
-      1
-    );
-    const compressionRatio = (originalSize / compressedSize).toFixed(2);
+    const sizeReduction = Math.max(0, originalSize - compressedSize);
+    const reductionPercentage =
+      originalSize > 0
+        ? ((sizeReduction / originalSize) * 100).toFixed(1)
+        : "0";
+    const compressionRatio =
+      compressedSize > 0 ? (originalSize / compressedSize).toFixed(2) : "1.00";
 
     const stats: CompressionStats = {
       sizeReduction: formatFileSize(sizeReduction),
