@@ -344,7 +344,7 @@ export default function CompressPage() {
                   />
                 ) : (
                   <div className="text-white/60">
-                    Configure a compressão e clique em 'Comprimir'
+                    Configure a compressão e clique em &apos;Comprimir&apos;
                   </div>
                 )}
               </div>
