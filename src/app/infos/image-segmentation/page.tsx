@@ -207,38 +207,6 @@ export default function ImageSegmentationPage() {
               </div>
             </section>
 
-            {/* Vídeo Educativos */}
-            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Vídeo Educativos
-              </h2>
-              <div className="flex justify-center">
-                <div className="bg-black/20 rounded-lg overflow-hidden border border-white/10">
-                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-600/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-4xl mb-2">▶</div>
-                      <p className="text-white text-sm">
-                        Image Segmentation Basics
-                      </p>
-                      <a
-                        href="https://www.youtube.com/watch?v=Q8o-7Q9yGgE"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-400 hover:text-blue-300 text-xs underline"
-                      >
-                        Assistir no YouTube
-                      </a>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <p className="text-white/80 text-sm">
-                      Introdução visual a técnicas clássicas de segmentação
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
             {/* Curiosidades */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
@@ -363,16 +331,6 @@ export default function ImageSegmentationPage() {
                       <span className="text-white/80">MONAI</span>
                     </div>
                   </div>
-
-                  <div className="mt-6 pt-4 border-t border-white/10">
-                    <h4 className="text-white font-medium mb-3">Categorias</h4>
-                    <div className="grid grid-cols-1 gap-2 text-sm">
-                      <div className="text-white/60">• Semântica</div>
-                      <div className="text-white/60">• Instância</div>
-                      <div className="text-white/60">• Panóptica</div>
-                      <div className="text-white/60">• Interativa</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </section>
@@ -385,20 +343,20 @@ export default function ImageSegmentationPage() {
               <div className="">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-4">
-                    Livros e Artigos
+                    Artigos e Referências
                   </h3>
                   <div className="space-y-3">
                     <a
-                      href="https://en.wikipedia.org/wiki/Image_segmentation"
+                      href="https://medium.com/@raj.pulapakura/image-segmentation-a-beginners-guide-0ede91052db7"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
                     >
                       <h4 className="text-white font-medium mb-1">
-                        Wikipedia - Image Segmentation
+                        Image Segmentation
                       </h4>
                       <p className="text-white/60 text-sm">
-                        Visão geral de técnicas e aplicações
+                        Guia para iniciantes
                       </p>
                     </a>
 

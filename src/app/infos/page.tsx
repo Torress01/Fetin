@@ -167,23 +167,27 @@ export default function InfosPage() {
       <main className="bg-black/20 rounded-t-3xl relative z-10 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
           {/* Filter Tabs */}
-          <div className="mb-8 sm:mb-12">
-            <div className="overflow-x-auto no-scrollbar">
-              <div className="inline-flex min-w-max gap-2 p-1 rounded-full border border-white/10 bg-white/5">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setActiveCategory(category)}
-                    className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 whitespace-nowrap ${
-                      activeCategory === category
-                        ? "bg-white/10 text-white border border-white/20"
-                        : "text-white/70 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
+          <div className="mb-8 sm:mb-12 px-2">
+            {/* Principais mudanças aqui:
+    - Removemos a div com 'overflow-x-auto'.
+    - Usamos 'flex flex-wrap' para permitir a quebra de linha.
+    - 'justify-center' para centralizar os botões.
+    - 'gap-2' para o espaçamento entre eles.
+  */}
+            <div className="flex flex-wrap justify-center gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 whitespace-nowrap ${
+                    activeCategory === category
+                      ? "bg-white text-gray-900" // Estilo ativo simplificado para melhor contraste
+                      : "text-white/70 bg-white/10 hover:text-white"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
 

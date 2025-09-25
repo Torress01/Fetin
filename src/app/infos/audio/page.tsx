@@ -15,7 +15,7 @@ export default function AudioPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -180,51 +180,6 @@ export default function AudioPage() {
                       <span className="text-xs text-white/60 mt-2 block">
                         Taxa de Amostragem ≥ 2 × Frequência Máxima
                       </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Exemplos Práticos */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                  <div className="bg-black/30 rounded-lg p-3 sm:p-4 border border-white/10">
-                    <h4 className="text-white font-semibold mb-2 text-sm sm:text-base">
-                      CD de Áudio
-                    </h4>
-                    <div className="space-y-1 text-xs sm:text-sm">
-                      <p>
-                        <span className="text-blue-400">Taxa:</span> 44.1 kHz
-                      </p>
-                      <p>
-                        <span className="text-green-400">Bits:</span> 16 bits
-                      </p>
-                      <p>
-                        <span className="text-purple-400">Canais:</span> 2
-                        (Estéreo)
-                      </p>
-                      <p className="text-xs text-white/60 mt-2">
-                        Taxa de bits: 1.411 Mbps
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="bg-black/30 rounded-lg p-3 sm:p-4 border border-white/10">
-                    <h4 className="text-white font-semibold mb-2 text-sm sm:text-base">
-                      Áudio Telefônico
-                    </h4>
-                    <div className="space-y-1 text-xs sm:text-sm">
-                      <p>
-                        <span className="text-blue-400">Taxa:</span> 8 kHz
-                      </p>
-                      <p>
-                        <span className="text-green-400">Bits:</span> 8 bits
-                      </p>
-                      <p>
-                        <span className="text-purple-400">Canais:</span> 1
-                        (Mono)
-                      </p>
-                      <p className="text-xs text-white/60 mt-2">
-                        Taxa de bits: 64 kbps
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -456,47 +411,25 @@ export default function AudioPage() {
                 Recursos e Referências
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <div className="">
                 <div>
                   <h3 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">
-                    Livros e Documentação
+                    Artigos e Videos
                   </h3>
                   <div className="space-y-3">
                     <a
-                      href="https://web.archive.org/web/20160305052232/http://www.dspguide.com/pdfbook.htm"
+                      href="https://www.sciencedirect.com/topics/engineering/audio-signal-processing"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block bg-black/20 rounded-lg p-3 sm:p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
                     >
                       <h4 className="text-white font-medium mb-1 text-sm sm:text-base">
-                        The Scientist and Engineer&apos;s Guide to DSP
+                        Processamento de Sinal de Áudio - uma visão geral
                       </h4>
                       <p className="text-white/60 text-xs sm:text-sm">
-                        Livro completo sobre processamento digital de sinais
+                        Artigo completo sobre processamento digital de sinais
                       </p>
                     </a>
-
-                    <a
-                      href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-3 sm:p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1 text-sm sm:text-base">
-                        Web Audio API - MDN
-                      </h4>
-                      <p className="text-white/60 text-xs sm:text-sm">
-                        Documentação da API de áudio para web
-                      </p>
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">
-                    Vídeos e Cursos
-                  </h3>
-                  <div className="space-y-3">
                     <a
                       href="https://www.youtube.com/watch?v=yWqrx08UeUs"
                       target="_blank"
@@ -525,6 +458,24 @@ export default function AudioPage() {
                       </p>
                     </a>
                   </div>
+                </div>
+              </div>
+            </section>
+            <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Experimente na Prática
+              </h2>
+              <div className="text-center">
+                <p className="text-white/80 mb-6">
+                  Teste nossa ferramenta interativa de Aliasing.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => router.push("/aliasing")}
+                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:opacity-60 cursor-pointer"
+                  >
+                    Ferramenta Interativa
+                  </button>
                 </div>
               </div>
             </section>

@@ -16,7 +16,7 @@ export default function GeometricTransformationsPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -212,8 +212,8 @@ export default function GeometricTransformationsPage() {
                     T_final = T₃ × T₂ × T₁
                     <br />
                     <span className="text-white/60">
-                      Aplicada da direita para esquerda: T₁, depois T₂,
-                      depois T₃
+                      Aplicada da direita para esquerda: T₁, depois T₂, depois
+                      T₃
                     </span>
                   </div>
                 </div>
@@ -299,7 +299,7 @@ export default function GeometricTransformationsPage() {
                   <div className="p-4">
                     <p className="text-white/80 text-sm">
                       Tutorial prático sobre implementação de transformações
-                      matriciais
+                      matriciais por 3Blue1Brown
                     </p>
                   </div>
                 </div>
@@ -343,7 +343,7 @@ export default function GeometricTransformationsPage() {
                     transformações.
                   </p>
                   <a
-                    href="https://www.pixar.com/how-we-do-it"
+                    href="https://www.youtube.com/watch?v=_IZMVMf4NQ0"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 text-xs underline"
@@ -363,25 +363,6 @@ export default function GeometricTransformationsPage() {
                   </p>
                   <a
                     href="https://en.wikipedia.org/wiki/Medical_image_computing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 text-xs underline"
-                  >
-                    Saiba mais →
-                  </a>
-                </div>
-
-                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    Carros Autônomos
-                  </h3>
-                  <p className="text-white/80 text-sm leading-relaxed mb-3">
-                    Sistemas de visão computacional usam transformações para
-                    mapear coordenadas de múltiplas câmeras para um sistema de
-                    coordenadas unificado do mundo real.
-                  </p>
-                  <a
-                    href="https://en.wikipedia.org/wiki/Computer_vision_for_autonomous_vehicles"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 text-xs underline"
@@ -501,34 +482,6 @@ export default function GeometricTransformationsPage() {
                     Livros e Artigos
                   </h3>
                   <div className="space-y-3">
-                    <a
-                      href="https://www.cs.cmu.edu/~ph/869/papers/Foley.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1">
-                        Computer Graphics: Principles and Practice
-                      </h4>
-                      <p className="text-white/60 text-sm">
-                        Livro clássico sobre fundamentos de computação gráfica
-                      </p>
-                    </a>
-
-                    <a
-                      href="https://en.wikipedia.org/wiki/Transformation_matrix"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1">
-                        Wikipedia - Transformation Matrix
-                      </h4>
-                      <p className="text-white/60 text-sm">
-                        Artigo completo sobre matrizes de transformação
-                      </p>
-                    </a>
-
                     <a
                       href="https://www.mathworks.com/help/images/matrix-representation-of-geometric-transformations.html"
                       target="_blank"

@@ -16,7 +16,7 @@ export default function AnimationsPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -57,7 +57,7 @@ export default function AnimationsPage() {
                   <p>
                     A animação por computador começou na década de 1960, com
                     pioneiros como
-                    <strong className="text-white">Ivan Sutherland</strong> e
+                    <strong className="text-white"> Ivan Sutherland</strong> e
                     seu sistema Sketchpad. O primeiro filme de animação
                     computadorizada foi &quot;Hummingbird&quot; de Charles Csuri
                     em 1967.
@@ -118,104 +118,148 @@ export default function AnimationsPage() {
 
             {/* Teoria */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="flex justify-center text-3xl font-bold text-white mb-6">
+              <h2 className="text-center text-3xl font-bold text-white mb-8">
                 Princípios Fundamentais
               </h2>
-              <div className="text-white/80 space-y-6">
-                <div className="flex text-center gap-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">
-                      Os 12 Princípios de Disney
-                    </h3>
-                    <p className="leading-relaxed mb-4">
-                      Criados pelos animadores da Disney, estes princípios são
-                      fundamentais para criar animações convincentes e
-                      expressivas:
-                    </p>
-                  </div>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                      Squash and Stretch
-                    </h4>
-                    <p className="text-sm text-white/60">
-                      Deformação para dar sensação de peso e flexibilidade
-                    </p>
-                  </div>
-
-                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                      Anticipation
-                    </h4>
-                    <p className="text-sm text-white/60">
-                      Preparação para uma ação principal
-                    </p>
-                  </div>
-
-                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                      Staging
-                    </h4>
-                    <p className="text-sm text-white/60">
-                      Apresentação clara da ideia principal
-                    </p>
-                  </div>
-
-                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                      Timing & Spacing
-                    </h4>
-                    <p className="text-sm text-white/60">
-                      Controle do tempo e espaçamento entre frames
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+              {/* Seção dos 12 Princípios */}
+              <div className="mb-12">
+                <div className="text-center max-w-2xl mx-auto mb-8">
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    Interpolação Matemática
+                    Os 12 Princípios de Animação da Disney
                   </h3>
-                  <p className="leading-relaxed mb-4">
-                    A base matemática da animação é a interpolação entre valores
-                    ao longo do tempo:
+                  <p className="text-white/80 leading-relaxed">
+                    Criados pelos &quot;Nine Old Men&quot; da Disney, estes
+                    princípios são a base para criar movimentos realistas,
+                    expressivos e cativantes.
                   </p>
-                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
-                    valor_atual = valor_inicial + (valor_final - valor_inicial)
-                    × progresso
-                    <br />
-                    <span className="text-white/60">
-                      onde progresso varia de 0 a 1
-                    </span>
+                </div>
+
+                {/* Grid com todos os 12 princípios */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {[
+                    {
+                      name: "Squash and Stretch",
+                      desc: "Deformação do objeto para dar sensação de peso e flexibilidade.",
+                      color: "bg-blue-500",
+                    },
+                    {
+                      name: "Anticipation",
+                      desc: "A preparação que antecede uma ação principal, criando expectativa.",
+                      color: "bg-green-500",
+                    },
+                    {
+                      name: "Staging",
+                      desc: "Apresentação clara da ideia, guiando o olhar do espectador.",
+                      color: "bg-purple-500",
+                    },
+                    {
+                      name: "Straight Ahead",
+                      desc: "Dois métodos de animar: desenhando quadro a quadro ou definindo poses-chave.",
+                      color: "bg-orange-500",
+                    },
+                    {
+                      name: "Follow Through",
+                      desc: "Partes do corpo continuam o movimento mesmo após o personagem parar.",
+                      color: "bg-red-500",
+                    },
+                    {
+                      name: "Slow In & Slow Out",
+                      desc: "Aceleração e desaceleração no início e fim de uma ação.",
+                      color: "bg-yellow-500",
+                    },
+                    {
+                      name: "Arcs",
+                      desc: "Movimentos que seguem trajetórias curvas, tornando-os mais naturais.",
+                      color: "bg-pink-500",
+                    },
+                    {
+                      name: "Secondary Action",
+                      desc: "Ações menores que complementam e enriquecem a ação principal.",
+                      color: "bg-teal-500",
+                    },
+                    {
+                      name: "Timing",
+                      desc: "O número de frames para uma ação, definindo a velocidade e o peso.",
+                      color: "bg-indigo-500",
+                    },
+                    {
+                      name: "Exaggeration",
+                      desc: "Acentuar ações para aumentar o apelo e a clareza, sem distorcer a realidade.",
+                      color: "bg-rose-500",
+                    },
+                    {
+                      name: "Solid Drawing",
+                      desc: "Habilidade de desenhar formas em um espaço tridimensional.",
+                      color: "bg-cyan-500",
+                    },
+                    {
+                      name: "Appeal",
+                      desc: "O carisma de um personagem ou objeto, tornando-o agradável de se ver.",
+                      color: "bg-amber-500",
+                    },
+                  ].map((principle, index) => (
+                    <div
+                      key={principle.name}
+                      className="bg-black/30 rounded-lg p-4 border border-white/10 relative transition-all duration-300 hover:bg-black/40 hover:border-white/20"
+                    >
+                      <div className="absolute top-2 right-3 text-3xl font-bold text-white/10">
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+                      <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+                        <div
+                          className={`w-3 h-3 ${principle.color} rounded-full`}
+                        ></div>
+                        {principle.name}
+                      </h4>
+                      <p className="text-sm text-white/60">{principle.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Seção de matemática reestruturada para melhor fluxo */}
+              <div className="bg-black/20 rounded-lg p-6 border border-white/10">
+                <div className="text-center max-w-2xl mx-auto mb-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    A Matemática por Trás do Movimento
+                  </h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Digitalmente, o movimento é criado através da interpolação.
+                    Definimos pontos-chave (keyframes) e o computador calcula os
+                    quadros intermediários.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">
+                      Keyframes (Quadros-Chave)
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      Os momentos mais importantes da animação, como o início e
+                      o fim de um movimento. São o &quot;valor inicial&quot; e o
+                      &quot;valor final&quot;.
+                    </p>
+                  </div>
+                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
+                    <h4 className="text-white font-medium mb-2">
+                      Interpolação (Tweening)
+                    </h4>
+                    <p className="text-sm text-white/60">
+                      O processo de gerar os quadros intermediários. A forma
+                      mais simples é a interpolação linear (Lerp).
+                    </p>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-medium mb-2">
-                      Easing Functions
-                    </h4>
-                    <p className="text-sm text-white/60">
-                      Controlam aceleração e desaceleração
-                    </p>
-                  </div>
-                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-medium mb-2">Keyframes</h4>
-                    <p className="text-sm text-white/60">
-                      Pontos principais da animação
-                    </p>
-                  </div>
-                  <div className="bg-black/20 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-medium mb-2">Frame Rate</h4>
-                    <p className="text-sm text-white/60">
-                      Frequência de atualização (FPS)
-                    </p>
-                  </div>
+                <div className="text-white/90 bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
+                  valor_atual = valor_inicial + (valor_final - valor_inicial) ×
+                  progresso
+                  <br />{" "}
+                  <span className="text-white/50">
+                    onde progresso varia de 0 a 1{" "}
+                  </span>{" "}
                 </div>
               </div>
             </section>
@@ -270,7 +314,7 @@ export default function AnimationsPage() {
                     renderizado.
                   </p>
                   <a
-                    href="https://www.pixar.com/toy-story"
+                    href="https://www.youtube.com/watch?v=PX1p0lnhQ88"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 text-xs underline"
@@ -425,12 +469,6 @@ export default function AnimationsPage() {
                       <span className="text-white/80">Blender</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-white/80">CSS Animations</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-white/80">Lottie</span>
-                    </div>
-                    <div className="flex justify-between items-center">
                       <span className="text-white/80">Unity/Unreal</span>
                     </div>
                   </div>
@@ -462,23 +500,9 @@ export default function AnimationsPage() {
               <div className="">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-4">
-                    Livros e Artigos
+                    Artigos
                   </h3>
                   <div className="space-y-3">
-                    <a
-                      href="https://www.amazon.com/Animators-Survival-Kit-Richard-Williams/dp/086547897X"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1">
-                        The Animator&apos;s Survival Kit
-                      </h4>
-                      <p className="text-white/60 text-sm">
-                        Livro clássico de Richard Williams sobre animação
-                      </p>
-                    </a>
-
                     <a
                       href="https://en.wikipedia.org/wiki/Computer_animation"
                       target="_blank"

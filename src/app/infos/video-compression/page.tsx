@@ -16,7 +16,7 @@ export default function VideoCompressionPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -306,18 +306,18 @@ export default function VideoCompressionPage() {
             </section>
             {/* Demo Link */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center justify-center gap-3">
                 Experimente na Prática
               </h2>
               <div className="text-center">
                 <p className="text-white/80 mb-6">
-                  Teste nossa ferramenta interativa.
+                  Teste nossa ferramenta interativa para compressão de imagens.
                 </p>
                 <button
                   onClick={() => router.push("/compress")}
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/40"
+                  className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:opacity-80 cursor-pointer"
                 >
-                  Acessar
+                  Acessar Ferramenta
                 </button>
               </div>
             </section>

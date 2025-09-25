@@ -16,7 +16,7 @@ export default function RayTracingPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -110,8 +110,8 @@ export default function RayTracingPage() {
                 Princípios Fundamentais
               </h2>
               <div className="text-white/80 space-y-6">
-                <div className="flex text-center gap-6">
-                  <div>
+                <div className="flex justify-center text-center gap-6">
+                  <div className="">
                     <h3 className="text-xl font-semibold text-white mb-3">
                       O Algoritmo Básico
                     </h3>
@@ -128,7 +128,8 @@ export default function RayTracingPage() {
                   <br />
                   3. Calcular cor com luzes e material
                   <br />
-                  4. Gerar raios de sombra/ reflexão/ refração conforme material
+                  4. Gerar raios de sombra / reflexão / refração conforme
+                  material
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
@@ -201,6 +202,14 @@ export default function RayTracingPage() {
                     Jogos como Cyberpunk 2077 e Control usam ray tracing para
                     criar reflexões, sombras e iluminação global realistas.
                   </p>
+                  <a
+                    href="https://www.youtube.com/watch?v=iOlehM5kNSk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 text-xs underline"
+                  >
+                    Saiba mais →
+                  </a>
                 </div>
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
@@ -211,6 +220,14 @@ export default function RayTracingPage() {
                     Studios como Pixar usam ray tracing para renderizar seus
                     filmes, levando horas para renderizar um único frame.
                   </p>
+                  <a
+                    href="https://www.youtube.com/watch?v=iOlehM5kNSk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 text-xs underline"
+                  >
+                    Saiba mais →
+                  </a>
                 </div>
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
@@ -310,34 +327,6 @@ export default function RayTracingPage() {
               </h2>
               <div className="space-y-3">
                 <a
-                  href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                >
-                  <h4 className="text-white font-medium mb-1">
-                    Wikipedia - Ray Tracing
-                  </h4>
-                  <p className="text-white/60 text-sm">
-                    História, teoria e variações do algoritmo
-                  </p>
-                </a>
-
-                <a
-                  href="https://www.pbrt.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                >
-                  <h4 className="text-white font-medium mb-1">
-                    PBRT - Physically Based Rendering
-                  </h4>
-                  <p className="text-white/60 text-sm">
-                    Livro clássico sobre renderização fisicamente baseada
-                  </p>
-                </a>
-
-                <a
                   href="https://raytracing.github.io/books/RayTracingInOneWeekend.html"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -350,27 +339,19 @@ export default function RayTracingPage() {
                     Série gratuita para implementar seu próprio ray tracer
                   </p>
                 </a>
-              </div>
-            </section>
-
-            {/* Demo Link */}
-            <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center justify-center gap-3">
-                Experimente na Prática
-              </h2>
-              <div className="text-center">
-                <p className="text-white/80 mb-6">
-                  Veja um exemplo interativo de iluminação e reflexão em tempo
-                  real.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button
-                    onClick={() => router.push("/canvas")}
-                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:opacity-60 cursor-pointer"
-                  >
-                    Ferramenta Interativa
-                  </button>
-                </div>
+                <a
+                  href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                >
+                  <h4 className="text-white font-medium mb-1">
+                    Wikipedia - Ray Tracing
+                  </h4>
+                  <p className="text-white/60 text-sm">
+                    História, teoria e variações do algoritmo
+                  </p>
+                </a>
               </div>
             </section>
           </div>

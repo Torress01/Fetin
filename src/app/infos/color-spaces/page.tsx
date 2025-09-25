@@ -17,7 +17,7 @@ export default function ColorSpacesPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -140,30 +140,6 @@ export default function ColorSpacesPage() {
                       Separa matiz, saturação e valor (brilho).
                     </p>
                   </div>
-
-                  <div className="bg-black/30 rounded-lg p-4 border border-white/10">
-                    <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                      Gestão de Cor
-                    </h4>
-                    <p className="text-sm text-white/60">
-                      Perfis ICC e calibração de dispositivos.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-black/20 rounded-lg p-6 border border-white/10">
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    Conversões
-                  </h3>
-                  <p className="leading-relaxed mb-4">
-                    Exemplo de combinação aditiva em RGB:
-                  </p>
-                  <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
-                    Cor = R × (255,0,0) + G × (0,255,0) + B × (0,0,255)
-                    <br />
-                    <span className="text-white/60">R,G,B ∈ [0,255]</span>
-                  </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-4">
@@ -204,7 +180,7 @@ export default function ColorSpacesPage() {
                         Color Models Explained
                       </p>
                       <a
-                        href="https://www.youtube.com/watch?v=YqVvQf3R6bw"
+                        href="https://www.youtube.com/watch?v=-b2pAEHEQZc"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-300 text-xs underline"
@@ -215,7 +191,7 @@ export default function ColorSpacesPage() {
                   </div>
                   <div className="p-4">
                     <p className="text-white/80 text-sm">
-                      Visão geral de RGB, CMYK e HSV
+                      Visão geral de RGB, CMYK by The Visual Center
                     </p>
                   </div>
                 </div>
@@ -340,18 +316,6 @@ export default function ColorSpacesPage() {
                       <span className="text-white/80">ICC Profiler</span>
                     </div>
                   </div>
-
-                  <div className="mt-6 pt-4 border-t border-white/10">
-                    <h4 className="text-white font-medium mb-3">
-                      Perfis Comuns
-                    </h4>
-                    <div className="grid grid-cols-1 gap-2 text-sm">
-                      <div className="text-white/60">• sRGB</div>
-                      <div className="text-white/60">• Adobe RGB</div>
-                      <div className="text-white/60">• DCI-P3</div>
-                      <div className="text-white/60">• Rec.709</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </section>
@@ -369,20 +333,6 @@ export default function ColorSpacesPage() {
                     Livros e Artigos
                   </h3>
                   <div className="space-y-3">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Color_space"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1">
-                        Wikipedia - Color space
-                      </h4>
-                      <p className="text-white/60 text-sm">
-                        Visão geral de espaços de cor
-                      </p>
-                    </a>
-
                     <a
                       href="https://www.w3.org/TR/css-color-4/"
                       target="_blank"
@@ -406,6 +356,19 @@ export default function ColorSpacesPage() {
                       <h4 className="text-white font-medium mb-1">CIE</h4>
                       <p className="text-white/60 text-sm">
                         Commission Internationale de l&apos;Éclairage
+                      </p>
+                    </a>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Color_space"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
+                    >
+                      <h4 className="text-white font-medium mb-1">
+                        Wikipedia - Color space
+                      </h4>
+                      <p className="text-white/60 text-sm">
+                        Visão geral de espaços de cor
                       </p>
                     </a>
                   </div>

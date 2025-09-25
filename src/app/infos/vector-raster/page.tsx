@@ -16,7 +16,7 @@ export default function VectorRasterPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -59,8 +59,8 @@ export default function VectorRasterPage() {
                   </p>
                   <p>
                     Hoje, ambos os paradigmas coexistem: vetores para formas
-                    nítidas e escaláveis; raster para fotos e texturas ricas em
-                    detalhe.
+                    nítidas e escaláveis; matrizes para fotos e texturas ricas
+                    em detalhe.
                   </p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function VectorRasterPage() {
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
                     <span className="text-white font-medium">1960s:</span>
-                    <span className="text-white/80">Displays raster</span>
+                    <span className="text-white/80">Displays matriciais</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
@@ -90,7 +90,7 @@ export default function VectorRasterPage() {
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                     <span className="text-white font-medium">Hoje:</span>
                     <span className="text-white/80">
-                      Coexistência vetorial/raster
+                      Coexistência vetorial/matricial
                     </span>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export default function VectorRasterPage() {
                       Resolução & DPI
                     </h4>
                     <p className="text-sm text-white/60">
-                      No raster, qualidade depende da densidade de pixels.
+                      No matricial, qualidade depende da densidade de pixels.
                     </p>
                   </div>
 
@@ -132,7 +132,7 @@ export default function VectorRasterPage() {
                       Escalabilidade
                     </h4>
                     <p className="text-sm text-white/60">
-                      Vetores escalam sem perda; raster pixeliza ao ampliar.
+                      Vetores escalam sem perda; matrizes pixeliza ao ampliar.
                     </p>
                   </div>
 
@@ -142,7 +142,7 @@ export default function VectorRasterPage() {
                       Amostragem & Anti-aliasing
                     </h4>
                     <p className="text-sm text-white/60">
-                      Suaviza bordas serrilhadas em raster; vetores rendem
+                      Suaviza bordas serrilhadas em matrizes; vetores rendem
                       contornos nítidos.
                     </p>
                   </div>
@@ -154,18 +154,18 @@ export default function VectorRasterPage() {
                     </h4>
                     <p className="text-sm text-white/60">
                       Métodos (nearest, bilinear, bicubic) ao redimensionar
-                      raster.
+                      matrizes.
                     </p>
                   </div>
                 </div>
 
                 <div className="bg-black/20 rounded-lg p-6 border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    Modelo Raster Simplificado
+                    Modelo Matricial Simplificado
                   </h3>
                   <p className="leading-relaxed mb-4">
-                    Uma imagem raster pode ser vista como uma função amostrada
-                    no plano:
+                    Uma imagem matricial pode ser vista como uma função
+                    amostrada no plano:
                   </p>
                   <div className="bg-black/30 rounded-lg p-4 font-mono text-sm border border-white/10">
                     I(x,y) = cor[pixel(x,y)]
@@ -207,7 +207,7 @@ export default function VectorRasterPage() {
                       <div className="text-4xl mb-2">▶</div>
                       <p className="text-white text-sm">Vector vs Raster</p>
                       <a
-                        href="https://www.youtube.com/watch?v=QCNrL1YV1oQ"
+                        href="https://www.youtube.com/watch?v=ZHF5JjZmMJI"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-300 text-xs underline"
@@ -247,8 +247,8 @@ export default function VectorRasterPage() {
                     Photoshop
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-3">
-                    Combina raster com vetores via camadas de forma para fluxos
-                    híbridos.
+                    Combina matrizes com vetores via camadas de forma para
+                    fluxos híbridos.
                   </p>
                 </div>
 
@@ -267,7 +267,7 @@ export default function VectorRasterPage() {
                     Impressão
                   </h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-3">
-                    Raster requer DPI adequado; vetores mantêm qualidade em
+                    Matriz requer DPI adequado; vetores mantêm qualidade em
                     qualquer tamanho.
                   </p>
                 </div>
@@ -277,23 +277,20 @@ export default function VectorRasterPage() {
             {/* Recursos e Referências */}
             <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                Referências
+                Artigos e Referências
               </h2>
               <div className="space-y-3">
                 <a
-                  href="https://en.wikipedia.org/wiki/Vector_graphics"
+                  href="https://developer.mozilla.org/en-US/docs/Web/SVG"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
                 >
-                  <h4 className="text-white font-medium mb-1">
-                    Wikipedia - Vector graphics
-                  </h4>
+                  <h4 className="text-white font-medium mb-1">MDN - SVG</h4>
                   <p className="text-white/60 text-sm">
-                    Introdução completa a gráficos vetoriais
+                    Documentação do SVG para a Web
                   </p>
                 </a>
-
                 <a
                   href="https://en.wikipedia.org/wiki/Raster_graphics"
                   target="_blank"
@@ -309,14 +306,16 @@ export default function VectorRasterPage() {
                 </a>
 
                 <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/SVG"
+                  href="https://en.wikipedia.org/wiki/Vector_graphics"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
                 >
-                  <h4 className="text-white font-medium mb-1">MDN - SVG</h4>
+                  <h4 className="text-white font-medium mb-1">
+                    Wikipedia - Vector graphics
+                  </h4>
                   <p className="text-white/60 text-sm">
-                    Documentação do SVG para a Web
+                    Introdução completa a gráficos vetoriais
                   </p>
                 </a>
               </div>
@@ -324,7 +323,7 @@ export default function VectorRasterPage() {
 
             {/* Demo Link */}
             <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
+              <h2 className="text-3xl flex justify-center font-bold text-white mb-6">
                 Experimente na Prática
               </h2>
               <div className="text-center">

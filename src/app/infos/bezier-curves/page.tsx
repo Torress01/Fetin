@@ -16,7 +16,7 @@ export default function BezierCurvesPage() {
           <div className="mb-8">
             <button
               onClick={() => router.back()}
-              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2"
+              className="text-white/60 hover:text-white transition-colors duration-300 flex items-center gap-2 cursor-pointer"
             >
               ← Voltar para material teórico
             </button>
@@ -392,20 +392,6 @@ export default function BezierCurvesPage() {
                       </h4>
                       <p className="text-white/60 text-sm">
                         Guia completo sobre curvas de Bézier por Pomax
-                      </p>
-                    </a>
-
-                    <a
-                      href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1">
-                        Wikipedia - Bézier Curve
-                      </h4>
-                      <p className="text-white/60 text-sm">
-                        Artigo detalhado com história e matemática
                       </p>
                     </a>
                   </div>

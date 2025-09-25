@@ -36,9 +36,9 @@ export default function SegmentationPage() {
 
   const loadDefaultImage = async () => {
     try {
-      const response = await fetch("images/Lenna_colored.png");
+      const response = await fetch("images/mandrill.png");
       const blob = await response.blob();
-      const file = new File([blob], "Lenna_colored.png", { type: "image/png" });
+      const file = new File([blob], "mandrill.png", { type: "image/png" });
       handleFile(file);
     } catch (error) {
       console.error("Erro ao carregar imagem padrão:", error);

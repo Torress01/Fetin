@@ -15,7 +15,7 @@ const tools: ToolCard[] = [
   {
     title: "Canvas Interativo",
     description:
-      "Desenhe e manipule formas geométricas com ferramentas profissionais",
+      "Desenhe e manipule formas geométricas com ferramentas interativas",
     icon: "🎨",
     href: "/canvas",
     color: "purple",
@@ -51,7 +51,7 @@ export default function SectionsComponent() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-purple-400 bg-clip-text ">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent pb-2">
             Computação Gráfica
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -64,7 +64,7 @@ export default function SectionsComponent() {
         {/* Tools Grid */}
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 gap-4 sm:gap-8 mb-12 sm:mb-16">
           {tools.map((tool, index) => (
             <Link
               key={index}
