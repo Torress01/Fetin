@@ -29,7 +29,7 @@ export default function CanvasPage() {
         <iframe
           src="/static-project/pages/transform.html"
           className="w-full h-full border-0"
-          title="Transformações 2D - Canvas Feliz"
+          title="Transformações 2D - Canvas"
           onLoad={handleIframeLoad}
           sandbox="allow-scripts allow-same-origin allow-forms"
         />
