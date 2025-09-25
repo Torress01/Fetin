@@ -430,33 +430,6 @@ export default function AudioPage() {
                         Artigo completo sobre processamento digital de sinais
                       </p>
                     </a>
-                    <a
-                      href="https://www.youtube.com/watch?v=yWqrx08UeUs"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-3 sm:p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1 text-sm sm:text-base">
-                        Sampling, Aliasing & Nyquist Theorem
-                      </h4>
-                      <p className="text-white/60 text-xs sm:text-sm">
-                        Explicação visual dos conceitos fundamentais
-                      </p>
-                    </a>
-
-                    <a
-                      href="https://www.youtube.com/watch?v=WIIKXOrt3bk"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block bg-black/20 rounded-lg p-3 sm:p-4 border border-white/10 hover:border-purple-500/50 transition-colors"
-                    >
-                      <h4 className="text-white font-medium mb-1 text-sm sm:text-base">
-                        Audio File Formats Explained
-                      </h4>
-                      <p className="text-white/60 text-xs sm:text-sm">
-                        Comparação entre MP3, AAC, WAV e FLAC
-                      </p>
-                    </a>
                   </div>
                 </div>
               </div>
