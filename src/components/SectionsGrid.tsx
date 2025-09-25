@@ -64,40 +64,42 @@ export default function SectionsComponent() {
         {/* Tools Grid */}
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 place-items-center mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-16">
           {tools.map((tool, index) => (
             <Link
               key={index}
               href={tool.href}
-              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl aspect-square flex flex-col items-center justify-center p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-white/15 ${getColorClasses(
+              className={`group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-white/15 min-h-[320px] sm:min-h-[380px] lg:min-h-[400px] flex flex-col ${getColorClasses(
                 tool.color
               )}`}
             >
               {/* Header */}
-              <div className="relative flex gap-4 items-center justify-center mb-4 z-10">
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300 ${getColorClasses(
-                    tool.color
-                  )}`}
-                >
-                  {tool.icon}
+              <div className="relative flex items-start justify-between mb-4 sm:mb-6">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div
+                    className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl group-hover:scale-105 transition-transform duration-300 ${getColorClasses(
+                      tool.color
+                    )}`}
+                  >
+                    {tool.icon}
+                  </div>
+                  <h3 className="text-lg sm:text-2xl font-bold text-white">
+                    {tool.title}
+                  </h3>
                 </div>
-                <h3 className="mt-2 text-2xl font-bold text-white transition-colors duration-300 text-center">
-                  {tool.title}
-                </h3>
               </div>
 
               {/* Description */}
-              <p className="relative text-white/80 mb-7 leading-relaxed text-center z-10">
+              <p className="relative text-white/80 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base flex-grow">
                 {tool.description}
               </p>
 
               {/* Features */}
-              <div className="relative flex flex-wrap gap-2 mb-4 justify-center z-10">
+              <div className="relative flex flex-wrap gap-2 mb-4 sm:mb-6">
                 {tool.features.map((feature) => (
                   <span
                     key={feature}
-                    className="bg-slate-900 text-white/90 px-3 py-1 rounded-full text-sm border border-white/20 hover:scale-105 transition-transform duration-300"
+                    className="bg-white/10 text-white/90 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-white/10 hover:bg-white/15 transition-colors duration-300"
                   >
                     {feature}
                   </span>
@@ -105,11 +107,11 @@ export default function SectionsComponent() {
               </div>
 
               {/* CTA */}
-              <div className="relative flex items-center justify-center gap-2 mt-10 z-10">
-                <span className="text-white/60 text-sm">
+              <div className="relative flex items-center justify-between mt-auto">
+                <span className="text-white/60 text-xs sm:text-sm">
                   Clique para explorar
                 </span>
-                <span className="text-2xl group-hover:translate-x-2 transition-transform duration-300">
+                <span className="text-lg sm:text-2xl group-hover:translate-x-1 transition-transform duration-300">
                   →
                 </span>
               </div>
