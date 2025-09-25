@@ -1,6 +1,3 @@
-/// <reference path="../node_modules/@types/p5/global.d.ts" />
-/// <reference path="../node_modules/@irojs/iro-core/dist/index.d.ts" />
-
 let buttonCreate: any,
   buttonTranslate: any,
   buttonScale: any,

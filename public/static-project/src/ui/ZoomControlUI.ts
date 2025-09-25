@@ -47,7 +47,7 @@ class ZoomControlUI {
       },
       {
         className: "zoom-button home-button",
-        iconPath: "icons/home.svg",
+        iconPath: "static-project/icons/home.svg",
         fixedWidth: false,
       }
     );
