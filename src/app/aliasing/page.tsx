@@ -8,7 +8,6 @@ export default function AliasingPage() {
   const [samplingFrequency, setSamplingFrequency] = useState(5);
 
   const sineFrequency = 3; // Frequência maior, ex: 6 Hz
-  const numPoints = 50; // Fixo para cobrir toda a onda
   const totalTime = 2; // 2 segundos para uma ou duas ondas
 
   useEffect(() => {
@@ -124,7 +123,11 @@ export default function AliasingPage() {
     for (let x = 0; x <= width; x += 2) {
       const t = (x / width) * totalTime;
       const y = centerY + amplitude * Math.sin(2 * Math.PI * frequency * t);
-      x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      if (x === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
     }
 
     ctx.stroke();
